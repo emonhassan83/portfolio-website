@@ -1,7 +1,16 @@
-import { AiOutlineArrowRight, AiFillCheckCircle } from 'react-icons/ai';
+import './Service.css'
+import { AiOutlineArrowRight, AiOutlineCheckCircle } from 'react-icons/ai';
 import { RxCross1 } from 'react-icons/rx';
+import { BsCode, BsWindowSidebar, BsJournalCode } from 'react-icons/bs';
+import { useState } from 'react';
 
 const Services = () => {
+    const [toggleState, setToggleState] = useState(0);
+
+    const toggleTab = (index)=> {
+        setToggleState(index);
+    }
+
     return (
         <section className="services section" id="services">
             <h2 className="section__title">Services</h2>
@@ -9,41 +18,41 @@ const Services = () => {
             <div className="services__container container grid">
                 <div className="services__content">
                     <div>
-                        <p>service icon</p>
+                        <BsWindowSidebar className='services__icon'/>
                         <h3 className="services__title">Web<br />Designer</h3>
                     </div>
 
-                    <span className="services__button">View More<AiOutlineArrowRight/></span>
+                    <span onClick={() => toggleTab(1)} className="services__button">View More<AiOutlineArrowRight className='services__button-icon'/></span>
 
-                    <div className="services__modal">
+                    <div className={toggleState === 1 ? "services__modal active-modal" : "services__modal"}>
                         <div className="services__modal-content">
-                            <RxCross1 className='services__modal-close'/>
+                            <RxCross1 onClick={()=> toggleTab(0)} className='services__modal-close'/>
 
-                            <h3 className="services__modal-title">Web<br />Designer</h3>
+                            <h3 className="services__modal-title">Web Designer</h3>
                             <p className="services__modal-description">Service with more than 6 month of experience. Providing quality work and delivering high-quality, user-centric design.</p>
 
                             <ul className="services__modal-services grid">
                                 <li className="services__modal-service">
-                                    <AiFillCheckCircle className='services__modal-icon'/>
+                                    <AiOutlineCheckCircle className='services__modal-icon'/>
                                     <p className="services__modal-info">I develop the user interface.</p>
                                 </li>
                                 
                                 <li className="services__modal-service">
-                                    <AiFillCheckCircle className='services__modal-icon'/>
+                                    <AiOutlineCheckCircle className='services__modal-icon'/>
                                     <p className="services__modal-info">Web page development.</p>
                                 </li>
 
                                 <li className="services__modal-service">
-                                    <AiFillCheckCircle className='services__modal-icon'/>
+                                    <AiOutlineCheckCircle className='services__modal-icon'/>
                                     <p className="services__modal-info">I create ux element interaction.</p>
                                 </li>
 
                                 <li className="services__modal-service">
-                                    <AiFillCheckCircle className='services__modal-icon'/>
+                                    <AiOutlineCheckCircle className='services__modal-icon'/>
                                     <p className="services__modal-info">I position your company brand.</p>
                                 </li>
                                 <li className="services__modal-service">
-                                    <AiFillCheckCircle className='services__modal-icon'/>
+                                    <AiOutlineCheckCircle className='services__modal-icon'/>
                                     <p className="services__modal-info">Design and mockups of products for companies.</p>
                                 </li>
 
@@ -53,41 +62,41 @@ const Services = () => {
                 </div>
                 <div className="services__content">
                     <div>
-                        <p>service icon</p>
+                        <BsCode className='services__icon'/>
                         <h3 className="services__title">Frontend <br />Developer</h3>
                     </div>
 
-                    <span className="services__button">View More<AiOutlineArrowRight/></span>
+                    <span onClick={() => toggleTab(2)} className="services__button">View More<AiOutlineArrowRight className='services__button-icon'/></span>
 
-                    <div className="services__modal">
+                    <div className={toggleState === 2 ? "services__modal active-modal" : "services__modal"}>
                         <div className="services__modal-content">
-                            <RxCross1 className='services__modal-close'/>
+                            <RxCross1 onClick={()=> toggleTab(0)} className='services__modal-close'/>
 
-                            <h3 className="services__modal-title">Frontend <br />Developer</h3>
+                            <h3 className="services__modal-title">Frontend Developer</h3>
                             <p className="services__modal-description">Service with more than 6 month of experience. Providing quality work and delivering high-quality, user-centric design.</p>
 
                             <ul className="services__modal-services grid">
                                 <li className="services__modal-service">
-                                    <AiFillCheckCircle className='services__modal-icon'/>
+                                    <AiOutlineCheckCircle className='services__modal-icon'/>
                                     <p className="services__modal-info">I develop the user interface.</p>
                                 </li>
                                 
                                 <li className="services__modal-service">
-                                    <AiFillCheckCircle className='services__modal-icon'/>
+                                    <AiOutlineCheckCircle className='services__modal-icon'/>
                                     <p className="services__modal-info">Web page development.</p>
                                 </li>
 
                                 <li className="services__modal-service">
-                                    <AiFillCheckCircle className='services__modal-icon'/>
+                                    <AiOutlineCheckCircle className='services__modal-icon'/>
                                     <p className="services__modal-info">I create ux element interaction.</p>
                                 </li>
 
                                 <li className="services__modal-service">
-                                    <AiFillCheckCircle className='services__modal-icon'/>
+                                    <AiOutlineCheckCircle className='services__modal-icon'/>
                                     <p className="services__modal-info">I position your company brand.</p>
                                 </li>
                                 <li className="services__modal-service">
-                                    <AiFillCheckCircle className='services__modal-icon'/>
+                                    <AiOutlineCheckCircle className='services__modal-icon'/>
                                     <p className="services__modal-info">Design and mockups of products for companies.</p>
                                 </li>
 
@@ -97,41 +106,41 @@ const Services = () => {
                 </div>
                 <div className="services__content">
                     <div>
-                        <p>service icon</p>
+                        <BsJournalCode className='services__icon'/>
                         <h3 className="services__title">Backend <br />Developer</h3>
                     </div>
 
-                    <span className="services__button">View More<AiOutlineArrowRight/></span>
+                    <span onClick={() => toggleTab(3)} className="services__button">View More<AiOutlineArrowRight className='services__button-icon'/></span>
 
-                    <div className="services__modal">
+                    <div className={toggleState === 3 ? "services__modal active-modal" : "services__modal"}>
                         <div className="services__modal-content">
-                            <RxCross1 className='services__modal-close'/>
+                            <RxCross1 onClick={()=> toggleTab(0)} className='services__modal-close'/>
 
-                            <h3 className="services__modal-title">Backend <br />Developer</h3>
+                            <h3 className="services__modal-title">Backend Developer</h3>
                             <p className="services__modal-description">Service with more than 6 month of experience. Providing quality work and delivering high-quality, user-centric design.</p>
 
                             <ul className="services__modal-services grid">
                                 <li className="services__modal-service">
-                                    <AiFillCheckCircle className='services__modal-icon'/>
+                                    <AiOutlineCheckCircle className='services__modal-icon'/>
                                     <p className="services__modal-info">I develop the user interface.</p>
                                 </li>
                                 
                                 <li className="services__modal-service">
-                                    <AiFillCheckCircle className='services__modal-icon'/>
+                                    <AiOutlineCheckCircle className='services__modal-icon'/>
                                     <p className="services__modal-info">Web page development.</p>
                                 </li>
 
                                 <li className="services__modal-service">
-                                    <AiFillCheckCircle className='services__modal-icon'/>
+                                    <AiOutlineCheckCircle className='services__modal-icon'/>
                                     <p className="services__modal-info">I create ux element interaction.</p>
                                 </li>
 
                                 <li className="services__modal-service">
-                                    <AiFillCheckCircle className='services__modal-icon'/>
+                                    <AiOutlineCheckCircle className='services__modal-icon'/>
                                     <p className="services__modal-info">I position your company brand.</p>
                                 </li>
                                 <li className="services__modal-service">
-                                    <AiFillCheckCircle className='services__modal-icon'/>
+                                    <AiOutlineCheckCircle className='services__modal-icon'/>
                                     <p className="services__modal-info">Design and mockups of products for companies.</p>
                                 </li>
 
