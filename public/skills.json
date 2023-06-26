@@ -1,0 +1,77 @@
+[
+    {
+      "_id": "649956279c288ebe97caa6a7",
+      "image": "https://i.ibb.co/NjDmHk1/html.png",
+      "name": "HTML"
+    },
+    {
+      "_id": "64995627752c7bec2eadf3e4",
+      "image": "https://i.ibb.co/gZ4QQm1/css.png",
+      "name": "CSS"
+    },
+    {
+      "_id": "649956278b8efb9b15d86b94",
+      "image": "https://i.ibb.co/j39VH3s/tailwind.png",
+      "name": "Tailwind CSS"
+    },
+    {
+      "_id": "64995627b6517d7409a48c49",
+      "image": "https://i.ibb.co/0c3gKdj/bootstrap.png",
+      "name": "Bootstrap"
+    },
+    {
+      "_id": "64995627d2235e5e7c970405",
+      "image": "https://i.ibb.co/Y01cNV8/sass.png",
+      "name": "SASS"
+    },
+    {
+      "_id": "64995627b8fac4009689262b",
+      "image": "https://i.ibb.co/Yfd3ynt/github.png",
+      "name": "GitHub"
+    },
+    {
+      "_id": "649956272d9283e96e580ff8",
+      "image": "https://i.ibb.co/LdyTsqj/figma.png",
+      "name": "Figma"
+    },
+    {
+      "_id": "649956274656bc7c3538dcc3",
+      "image": "https://i.ibb.co/zP3kDcV/javascript.png",
+      "name": "JavaScript"
+    },
+    {
+      "_id": "64995627363e795ff025e9fb",
+      "image": "https://i.ibb.co/YLDBcsc/api.png",
+      "name": "Rest API"
+    },
+    {
+      "_id": "64995627f536ac8037a32f1b",
+      "image": "https://i.ibb.co/Ttx9p1s/firebase.png",
+      "name": "Firebase"
+    },
+    {
+      "_id": "6499562771d81103fcb69096",
+      "image": "https://i.ibb.co/jHrJ1Kj/react.png",
+      "name": "React JS"
+    },
+    {
+      "_id": "64995627aa498b8e0b4c5d61",
+      "image": "https://i.ibb.co/Lpt0bgb/express-JS.png",
+      "name": "Express JS"
+    },
+    {
+      "_id": "64995627f1e89c2f44825abb",
+      "image": "https://i.ibb.co/9TTk0v7/node.png",
+      "name": "Node JS"
+    },
+    {
+      "_id": "64995627ba33c118d586a1db",
+      "image": "https://i.ibb.co/zh5jfTF/mongoDb.jpg",
+      "name": "MongoDB"
+    },
+    {
+      "_id": "64995627ed25a050b76b5c2b",
+      "image": "https://i.ibb.co/XDHbVcy/nextJS.png",
+      "name": "Next JS"
+    }
+  ]
