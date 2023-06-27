@@ -1,29 +1,30 @@
-import './App.css'
-import About from './components/About/About'
-import Banner from './components/Banner/Banner'
-import Contact from './components/Contact/Contact'
-import Footer from './components/Footer/Footer'
-import Navbar from './components/Navbar/Navbar'
-import Services from './components/Services/Services'
-import Skills from './components/Skills/Skills'
-import Testimonial from './components/Testimonial/Testimonial'
+import "./App.css";
+import About from "./components/About/About";
+import Banner from "./components/Banner/Banner";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import ScrollUp from "./components/ScrollUp/ScrollUp";
+import Services from "./components/Services/Services";
+import Skills from "./components/Skills/Skills";
+import Testimonial from "./components/Testimonial/Testimonial";
 
 function App() {
-
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <main className="main">
-        <Banner/>
-        <About/>
-        <Skills/>
-        <Services/>
-        <Testimonial/>
-        <Contact/>
-        <Footer/>
+        <Banner />
+        <About />
+        <Skills />
+        <Services />
+        <Testimonial />
+        <Contact />
       </main>
+      <Footer />
+      <ScrollUp />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

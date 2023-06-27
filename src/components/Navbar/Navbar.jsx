@@ -9,7 +9,17 @@ import { RxCross1 } from "react-icons/rx";
 import { useState } from "react";
 
 const Navbar = () => {
+  /* Change Background Header */
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector(".header");
+    // when the scroll is higher than 200 viewport height, aee the scroll-header class to a tag with the header tag
+    if (this.scrollY >= 80) header.classList.add("scroll-header");
+    else header.classList.remove("scroll-header");
+  });
+
   const [toggle, setToggle] = useState(false);
+  const [activeNav, setActiveNav] = useState("#home");
+
   return (
     <header className="header">
       <nav className="nav container">
@@ -19,40 +29,82 @@ const Navbar = () => {
         <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list">
             <li className="nav__item">
-              <a href="#home" className="nav__link active-link">
+              <a
+                href="#home"
+                onClick={() => setActiveNav("#home")}
+                className={
+                  activeNav === "#home" ? "nav__link active-link" : "nav__link"
+                }
+              >
                 <AiOutlineHome className="nav__icon" /> Home
               </a>
             </li>
             <li className="nav__item">
-              <a href="#about" className="nav__link">
-                <AiOutlineUser className="nav__icon"/> About
+              <a
+                href="#about"
+                onClick={() => setActiveNav("#about")}
+                className={
+                  activeNav === "#about" ? "nav__link active-link" : "nav__link"
+                }
+              >
+                <AiOutlineUser className="nav__icon" /> About
               </a>
             </li>
             <li className="nav__item">
-              <a href="#skills" className="nav__link">
-                <GrDocumentText className="nav__icon"/> Skills
+              <a
+                href="#skills"
+                onClick={() => setActiveNav("#skill")}
+                className={
+                  activeNav === "#skill" ? "nav__link active-link" : "nav__link"
+                }
+              >
+                <GrDocumentText className="nav__icon" /> Skills
               </a>
             </li>
             <li className="nav__item">
-              <a href="#services" className="nav__link">
-                <MdOutlineHomeRepairService className="nav__icon"/> Services
+              <a
+                href="#services"
+                onClick={() => setActiveNav("#services")}
+                className={
+                  activeNav === "#services"
+                    ? "nav__link active-link"
+                    : "nav__link"
+                }
+              >
+                <MdOutlineHomeRepairService className="nav__icon" /> Services
               </a>
             </li>
             <li className="nav__item">
-              <a href="#portfolio" className="nav__link">
-                <BsFillImageFill className="nav__icon"/> Portfolio
+              <a
+                href="#portfolio"
+                onClick={() => setActiveNav("#portfolio")}
+                className={
+                  activeNav === "#portfolio"
+                    ? "nav__link active-link"
+                    : "nav__link"
+                }
+              >
+                <BsFillImageFill className="nav__icon" /> Portfolio
               </a>
             </li>
             <li className="nav__item">
-              <a href="#contact" className="nav__link">
-                <BiSolidMessageSquareDetail className="nav__icon"/> Contract
+              <a
+                href="#contact"
+                onClick={() => setActiveNav("#contact")}
+                className={
+                  activeNav === "#contact"
+                    ? "nav__link active-link"
+                    : "nav__link"
+                }
+              >
+                <BiSolidMessageSquareDetail className="nav__icon" /> Contract
               </a>
             </li>
           </ul>
-          <RxCross1 className="nav__close" onClick={()=> setToggle(!toggle)}/>
+          <RxCross1 className="nav__close" onClick={() => setToggle(!toggle)} />
         </div>
-        <div className="nav__toggle" onClick={()=> setToggle(!toggle)}>
-          <FaBars/>
+        <div className="nav__toggle" onClick={() => setToggle(!toggle)}>
+          <FaBars />
         </div>
       </nav>
     </header>
