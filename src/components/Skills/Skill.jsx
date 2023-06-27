@@ -1,7 +1,7 @@
 const Skill = ({ singleSkill }) => {
   const { image, name } = singleSkill;
   return (
-    <div className="skill__section">
+    <div className="skill__box">
       <div className="skill__img">
       <img src={image} alt="" />
       </div>
