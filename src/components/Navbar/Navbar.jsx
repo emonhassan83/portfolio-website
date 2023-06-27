@@ -44,7 +44,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav__item">
-              <a href="#contract" className="nav__link">
+              <a href="#contact" className="nav__link">
                 <BiSolidMessageSquareDetail className="nav__icon"/> Contract
               </a>
             </li>
