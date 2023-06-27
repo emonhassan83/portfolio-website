@@ -5,8 +5,24 @@ import {
   AiOutlineArrowRight,
 } from "react-icons/ai";
 import { RiMessengerLine } from "react-icons/ri";
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_u5579sq', 'template_n0d1aau', form.current, 'GVC4lZO9Db_aCA5BK')
+     e.target.reset()
+    .then((result) => {
+      console.log(result.text);
+    }, (error) => {
+      console.log(error.text);
+    });
+  };
+
   return (
     <section className="contact section" id="contact">
       <h2 className="section__title">Get in touch</h2>
@@ -62,7 +78,7 @@ const Contact = () => {
 
         <div className="contact__content">
           <h3 className="contact__title">Write me your project</h3>
-          <form className="contact__form">
+          <form ref={form} onSubmit={sendEmail} className="contact__form">
             <div className="contact__form-div">
               <label className="contact__form-tag">Name</label>
               <input
