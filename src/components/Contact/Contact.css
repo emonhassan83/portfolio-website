@@ -1,5 +1,4 @@
 .contact__container {
-    /* TODO */
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     column-gap: 6rem;

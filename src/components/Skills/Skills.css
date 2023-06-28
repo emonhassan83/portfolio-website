@@ -36,7 +36,7 @@
 /* RESPONSIVE */
 @media screen and (max-width: 992px) {
   .skills__container {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     column-gap: 1.5rem;
   }
 }
@@ -44,7 +44,6 @@
 @media screen and (max-width: 768px) {
   .skills__container {
     grid-template-columns: repeat(5, 1fr);
-    column-gap: 1rem;
   }
   .skill__box {
     height: 100px;
