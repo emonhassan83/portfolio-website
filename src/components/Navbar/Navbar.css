@@ -62,7 +62,7 @@
     .header {
         top: initial;
         bottom: 0;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
     }
     .nav {
         height: var(--header-height);
