@@ -16,20 +16,8 @@ const Qualification = () => {
             Web Developer <span>Courses</span>
           </h3>
           <p className="qualification__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio magni
-            non suscipit dignissimos laborum neque.
-          </p>
-        </div>
-
-        <div className="qualification__item">
-          <BsBriefcase className="qualification__icon" />
-          <span className="qualification__date">2022-present</span>
-          <h3 className="qualification__subtitle">
-            MERN Steak Developer <span>Courses</span>
-          </h3>
-          <p className="qualification__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio magni
-            non suscipit dignissimos laborum neque.
+            I have successfully completed a comprehensive Web Development Course
+            with Jhankar Mahbub (Batch-7).
           </p>
         </div>
 
@@ -40,8 +28,20 @@ const Qualification = () => {
             Bachelor Degree <span>Govt. Bangla College</span>
           </h3>
           <p className="qualification__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio magni
-            non suscipit dignissimos laborum neque.
+            Currently, I am pursuing a Bachelor of Science degree in Chemistry
+            at Govt. Bangla College in Dhaka.
+          </p>
+        </div>
+
+        <div className="qualification__item">
+          <BsBriefcase className="qualification__icon" />
+          <span className="qualification__date">2022-present</span>
+          <h3 className="qualification__subtitle">
+            MERN Steak Developer <span>Courses</span>
+          </h3>
+          <p className="qualification__description">
+            I have successfully completed a comprehensive Web Development Course
+            with Jhankar Mahbub (Batch-7).
           </p>
         </div>
 
@@ -52,8 +52,8 @@ const Qualification = () => {
             College Degree <span>Govt Bulbul College</span>
           </h3>
           <p className="qualification__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio magni
-            non suscipit dignissimos laborum neque.
+            I hold a collage degree in Science from Govt. Bulbul College, Pabna,
+            obtained between 2018 and 2019.
           </p>
         </div>
       </div>

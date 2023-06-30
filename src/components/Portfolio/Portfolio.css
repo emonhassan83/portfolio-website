@@ -119,6 +119,17 @@
   font-weight: var(--font-semi-bold);
 }
 
+.portfolio__modal-time span, 
+.portfolio__modal-technology span,
+.portfolio__modal-link span {
+  font-weight: var(--font-semi-bold);
+}
+
+.portfolio__modal-link a {
+  color: blue;
+  font-weight: var(--font-medium);
+}
+
 .portfolio__modal-feature {
   display: flex;
   align-items: center;
@@ -166,8 +177,9 @@
   }
 
   .portfolio__modal-container {
-    display: grid;
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    width: max-content;
+    gap: 1rem;
   }
   .portfolio__modal-container {
     border-radius: 1.5rem;

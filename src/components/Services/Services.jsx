@@ -34,26 +34,26 @@ const Services = () => {
                             <ul className="services__modal-services grid">
                                 <li className="services__modal-service">
                                     <AiOutlineCheckCircle className='services__modal-icon'/>
-                                    <p className="services__modal-info">I develop the user interface.</p>
+                                    <p className="services__modal-info">Service with more than 6 month of experience. Providing quality work and delivering high-quality, user-centric design.</p>
                                 </li>
                                 
                                 <li className="services__modal-service">
                                     <AiOutlineCheckCircle className='services__modal-icon'/>
-                                    <p className="services__modal-info">Web page development.</p>
+                                    <p className="services__modal-info">Create websites that adapt to different devices.</p>
                                 </li>
 
                                 <li className="services__modal-service">
                                     <AiOutlineCheckCircle className='services__modal-icon'/>
-                                    <p className="services__modal-info">I create ux element interaction.</p>
+                                    <p className="services__modal-info">Prioritize user needs for intuitive interfaces and experiences.</p>
                                 </li>
 
                                 <li className="services__modal-service">
                                     <AiOutlineCheckCircle className='services__modal-icon'/>
-                                    <p className="services__modal-info">I position your company brand.</p>
+                                    <p className="services__modal-info">Optimize code and minimize file sizes for fast loading times.</p>
                                 </li>
                                 <li className="services__modal-service">
                                     <AiOutlineCheckCircle className='services__modal-icon'/>
-                                    <p className="services__modal-info">Design and mockups of products for companies.</p>
+                                    <p className="services__modal-info">Ensure websites are accessible to all users, including those with disabilities.</p>
                                 </li>
 
                             </ul>
@@ -73,31 +73,31 @@ const Services = () => {
                             <RxCross1 onClick={()=> toggleTab(0)} className='services__modal-close'/>
 
                             <h3 className="services__modal-title">Frontend Developer</h3>
-                            <p className="services__modal-description">Service with more than 6 month of experience. Providing quality work and delivering high-quality, user-centric design.</p>
+                            <p className="services__modal-description">Designs and develops user-facing websites using HTML, CSS, and JavaScript, ensuring optimal performance and seamless user experience.</p>
 
                             <ul className="services__modal-services grid">
                                 <li className="services__modal-service">
                                     <AiOutlineCheckCircle className='services__modal-icon'/>
-                                    <p className="services__modal-info">I develop the user interface.</p>
+                                    <p className="services__modal-info">HTML: Structure webpage content using tags for organization.</p>
                                 </li>
                                 
                                 <li className="services__modal-service">
                                     <AiOutlineCheckCircle className='services__modal-icon'/>
-                                    <p className="services__modal-info">Web page development.</p>
+                                    <p className="services__modal-info">CSS Styling: Apply styles for visual appeal and layout.</p>
                                 </li>
 
                                 <li className="services__modal-service">
                                     <AiOutlineCheckCircle className='services__modal-icon'/>
-                                    <p className="services__modal-info">I create ux element interaction.</p>
+                                    <p className="services__modal-info">Responsive Design: Adapt websites to different devices.</p>
                                 </li>
 
                                 <li className="services__modal-service">
                                     <AiOutlineCheckCircle className='services__modal-icon'/>
-                                    <p className="services__modal-info">I position your company brand.</p>
+                                    <p className="services__modal-info">JavaScript Interactivity: Add interactive elements using JavaScript.</p>
                                 </li>
                                 <li className="services__modal-service">
                                     <AiOutlineCheckCircle className='services__modal-icon'/>
-                                    <p className="services__modal-info">Design and mockups of products for companies.</p>
+                                    <p className="services__modal-info">Performance Optimization: Optimize code and files for faster loading.</p>
                                 </li>
 
                             </ul>
@@ -117,31 +117,31 @@ const Services = () => {
                             <RxCross1 onClick={()=> toggleTab(0)} className='services__modal-close'/>
 
                             <h3 className="services__modal-title">Backend Developer</h3>
-                            <p className="services__modal-description">Service with more than 6 month of experience. Providing quality work and delivering high-quality, user-centric design.</p>
+                            <p className="services__modal-description">Powers websites with server-side programming, databases, and APIs, ensuring efficient data management and seamless functionality.</p>
 
                             <ul className="services__modal-services grid">
                                 <li className="services__modal-service">
                                     <AiOutlineCheckCircle className='services__modal-icon'/>
-                                    <p className="services__modal-info">I develop the user interface.</p>
+                                    <p className="services__modal-info">Develop and maintain the server-side logic that powers website functionality.</p>
                                 </li>
                                 
                                 <li className="services__modal-service">
                                     <AiOutlineCheckCircle className='services__modal-icon'/>
-                                    <p className="services__modal-info">Web page development.</p>
+                                    <p className="services__modal-info">Design and manage databases to efficiently store and retrieve data.</p>
                                 </li>
 
                                 <li className="services__modal-service">
                                     <AiOutlineCheckCircle className='services__modal-icon'/>
-                                    <p className="services__modal-info">I create ux element interaction.</p>
+                                    <p className="services__modal-info">Integrate external APIs to enable communication between different software systems.</p>
                                 </li>
 
                                 <li className="services__modal-service">
                                     <AiOutlineCheckCircle className='services__modal-icon'/>
-                                    <p className="services__modal-info">I position your company brand.</p>
+                                    <p className="services__modal-info">Implement robust security measures to protect data and prevent unauthorized access.</p>
                                 </li>
                                 <li className="services__modal-service">
                                     <AiOutlineCheckCircle className='services__modal-icon'/>
-                                    <p className="services__modal-info">Design and mockups of products for companies.</p>
+                                    <p className="services__modal-info">Design systems that can handle increasing traffic and data loads as the website grows.</p>
                                 </li>
 
                             </ul>
