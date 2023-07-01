@@ -41,6 +41,7 @@ const Contact = () => {
               <a
                 href="mailto:emonhasan7650@gmail.com"
                 className="contact__button"
+                target="_blank" rel="noreferrer"
               >
                 Write Me
                 <AiOutlineArrowRight className="contact__button-icon" />
@@ -56,6 +57,7 @@ const Contact = () => {
               <a
                 href="https://wa.me/qr/SNWERHIR4JHWE1"
                 className="contact__button"
+                target="_blank" rel="noreferrer"
               >
                 Write Me
                 <AiOutlineArrowRight className="contact__button-icon" />
@@ -68,7 +70,10 @@ const Contact = () => {
               <h3 className="contact__card-title">Messenger</h3>
               <span className="contact__card-data">user.fb123</span>
 
-              <a href="https://m.me/emonhassan83" className="contact__button">
+              <a href="https://m.me/emonhassan83"
+               className="contact__button"
+               target="_blank" rel="noreferrer"
+               >
                 Write Me
                 <AiOutlineArrowRight className="contact__button-icon" />
               </a>

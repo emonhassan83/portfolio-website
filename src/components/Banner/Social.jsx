@@ -7,13 +7,13 @@ const Social = () => {
         <div>
             <div className="home__social">
                 <a href="https://www.instagram.com/emonhassan50/" className="home__social-icon" target="_blank" rel="noreferrer">
-                    <AiOutlineInstagram/>
+                    <AiOutlineInstagram className='home__social-icon'/>
                 </a>
                 <a href="https://www.linkedin.com/in/emonhassan83/" className="home__social-icon" target="_blank" rel="noreferrer">
-                    <CiLinkedin/>
+                    <CiLinkedin className='home__social-icon'/>
                 </a>
                 <a href="https://github.com/emonhassan83" className="home__social-icon" target="_blank" rel="noreferrer">
-                    <FiGithub/>
+                    <FiGithub className='home__social-icon'/>
                 </a>
             </div>
         </div>

@@ -6,7 +6,7 @@
 }
 
 .contact__title {
-    text-align: center;
+    text-align: start;
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-1-5);
@@ -91,6 +91,7 @@
     border: 2px solid rgba(0, 0, 0, 0.3);
     background: none;
     color: var(--text-color);
+    font-size: var(--smaller-font-size);
     outline: none;
     border-radius: 0.75rem;
     padding: 1.5rem;
@@ -126,6 +127,9 @@
     .contact__container {
         grid-template-columns: 1fr;
         row-gap: 3rem;
+    }
+    .contact__title {
+        text-align: center;
     }
     .contact__info {
         justify-content: center;
