@@ -142,6 +142,7 @@
   @media screen and (max-width: 576px) {
     .contact__container {
         grid-template-columns: 1fr;
+        padding: 0 1rem;
     }
   }
   
