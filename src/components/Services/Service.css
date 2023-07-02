@@ -139,6 +139,10 @@
   }
   
   @media screen and (max-width: 576px) {
+
+    .services__container {
+        padding-right: 2.8rem;
+    }
     .services__modal-content{
         padding: 4.5rem 1.5rem 2.5rem;
     } 

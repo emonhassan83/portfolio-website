@@ -2,7 +2,7 @@
 const BannerText = () => {
     return (
         <div className="home__data">
-            <h1 className="home__title mb-1 text-gray-800 flex items-center">Emon Hassan
+            <h1 className="home__title">Emon Hassan
               <svg
                   width="36"
                   height="36"

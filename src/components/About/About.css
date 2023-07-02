@@ -77,6 +77,23 @@
         padding: 0;
     }
   }
+
+  @media screen and (max-width: 576px) {
+    .about__container {
+        padding-right: 2.8rem;
+    }
+    .about__info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+       }
+       .about__img {
+        margin: 0 auto;
+       }
+    .about__description {
+        width: fit-content;
+        padding-left: 0rem;
+    }
+  }
   
   @media screen and (max-width: 350px) {
    .about__info {
