@@ -51,8 +51,10 @@
 
   @media screen and (max-width: 576px) {
     .testimonial__container {
-        margin-left: 0;
-        width: 350px;
+        width: 320px;
+    }
+    .testimonial__card {
+        padding: 1.5rem 0;
     }
   }
   

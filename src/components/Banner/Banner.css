@@ -173,7 +173,6 @@
   @media screen and (max-width: 768px) {
     .home__container {
         margin-top: -1.5rem;
-        padding-right: 2.8rem;
     }
     .home__description {
         width: fit-content;
@@ -182,6 +181,16 @@
         width: 24px;
         height: 24px;
        }
+  }
+
+  @media screen and (max-width: 576px) {
+    .home__container {
+        margin-top: -1.5rem;
+        padding-left: 1rem;
+    }
+    .home__description {
+        width: fit-content;
+    }
   }
   
   @media screen and (max-width: 350px) {

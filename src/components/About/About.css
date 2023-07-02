@@ -80,7 +80,7 @@
 
   @media screen and (max-width: 576px) {
     .about__container {
-        padding-right: 2.8rem;
+        padding: 0 .5rem;
     }
     .about__info {
         grid-template-columns: repeat(2, 1fr);

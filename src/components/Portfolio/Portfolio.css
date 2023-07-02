@@ -162,7 +162,6 @@
 @media screen and (max-width: 768px) {
   .portfolio__container {
     grid-template-columns: repeat(2, 1fr);
-    padding-right: 2.8rem;
   }
 
   .portfolio__title {
@@ -195,7 +194,7 @@
   .portfolio__modal-container {
     grid-template-columns: repeat(1, 1fr);
     width: max-content;
-    padding: 2.2rem;
+    padding: 2rem;
   }
   .portfolio__title {
     font-size: var(--normal-font-size);

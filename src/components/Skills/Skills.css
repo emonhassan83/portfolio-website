@@ -59,7 +59,7 @@
   .skills__container {
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem;
-    padding-right: 2.8rem;
+    padding: 0 .8rem;
   }
   .skill__box {
     height: 90px;

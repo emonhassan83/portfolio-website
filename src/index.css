@@ -172,6 +172,12 @@ color: rgb(39, 39, 39);
     margin-bottom: var(--mb-3);
   }
 }
+@media screen and (max-width: 768px) {
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
 @media screen and (max-width: 350px) {
   /* :root {
