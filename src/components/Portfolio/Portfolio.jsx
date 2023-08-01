@@ -66,8 +66,8 @@ const Portfolio = () => {
                     <li className="portfolio__modal-feature">
                       <VscDebugBreakpointLog className="portfolio__modal-icon" />
                       <p className="portfolio__modal-info">
-                        Integrated Firebase for twoway sign-in methods with form
-                        validation
+                        Integrated Firebase for two ways sign-in methods with form
+                        validation.
                       </p>
                     </li>
                     <li className="portfolio__modal-feature">
@@ -80,7 +80,7 @@ const Portfolio = () => {
                     <li className="portfolio__modal-feature">
                       <VscDebugBreakpointLog className="portfolio__modal-icon" />
                       <p className="portfolio__modal-info">
-                        Performs CRUD operation through NodeJS and Express JS
+                        Performs CRUD operation through NodeJS and Express JS.
                       </p>
                     </li>
                     <li className="portfolio__modal-feature">
@@ -91,12 +91,12 @@ const Portfolio = () => {
                     </li>
                   </ul>
                   <p className="portfolio__modal-time">
-                    <span>Created:</span> June 2023 - present
+                    <span>Created:</span> June 2023 - July 2023
                   </p>
                   <p className="portfolio__modal-technology">
                     <span>Technologies:</span> React Router, Firebase
                     authentication, MongoDB, stripe, NodeJS, CSS frameworks like
-                    Tailwind CSS, DaisyUI, HTML
+                    Tailwind CSS, DaisyUI, HTML.
                   </p>
                   <p className="portfolio__modal-link">
                     <span>View -</span>{" "}
@@ -200,7 +200,7 @@ const Portfolio = () => {
                     </li>
                   </ul>
                   <p className="portfolio__modal-time">
-                    <span>Created:</span> May 2020 - June 2023{" "}
+                    <span>Created:</span> May 2023 - June 2023
                   </p>
                   <p className="portfolio__modal-technology">
                     <span>Technologies:</span> React Router, Firebase
@@ -282,7 +282,7 @@ const Portfolio = () => {
                     <li className="portfolio__modal-feature">
                       <VscDebugBreakpointLog className="portfolio__modal-icon" />
                       <p className="portfolio__modal-info">
-                        Builds a responsive, accessible, and dynamic web page
+                        Builds a responsive, accessible, and dynamic web page.
                       </p>
                     </li>
                     <li className="portfolio__modal-feature">

@@ -7,7 +7,7 @@ export const TestimonialData = [
         id: 1,
         image: Image1,
         title: "Liam Hayes",
-        description: "Excellent web developer with exceptional coding skills, a keen eye for design and delivers outstanding results"
+        description: "Excellent web developer with exceptional coding skills, a keen eye for design and delivers outstanding results."
     },
     {
         id: 2,

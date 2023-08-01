@@ -7,12 +7,12 @@ const Info = () => {
             <div className="about__box">
                 <FiAward className='about__icon'/>
                 <h3 className="about__title">Experience</h3>
-                <span className="about__subtitle">6 Month Courses</span>
+                <span className="about__subtitle">8 Month+ Courses</span>
             </div>
             <div className="about__box">
                 <BiBriefcaseAlt className='about__icon'/>
                 <h3 className="about__title">Completed</h3>
-                <span className="about__subtitle">20+ Projects</span>
+                <span className="about__subtitle">30+ Projects</span>
             </div>
             <div className="about__box">
                 <BiSupport className='about__icon'/>

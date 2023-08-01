@@ -54,7 +54,7 @@ const BannerText = () => {
               </svg>
             </h1>
             <h3 className="home__subtitle">Web Developer</h3>
-            <p className="home__description">I'm creative web Developer and delivering high-quality, user-centric design. I'm very passionate and dedicated to my work</p>
+            <p className="home__description">I'm creative web Developer and delivering high-quality, user-centric design. I'm very passionate and dedicated to my work.</p>
             <a href="#contact" className="btn bg-gray-900 hover:bg-gray-800 text-white rounded-xl gap-0 capitalize">Explore Me
             <svg
                   className="button__icon"

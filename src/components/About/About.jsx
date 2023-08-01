@@ -1,7 +1,6 @@
 import "./About.css";
-import AboutImg from "../../assets/about2.jpg";
+import AboutImg from "../../assets/about.jpg";
 import Info from "./Info";
-//import Resume from "/public/Emon-resume.pdf";
 const About = () => {
   return (
     <section className="about section" id="about">
