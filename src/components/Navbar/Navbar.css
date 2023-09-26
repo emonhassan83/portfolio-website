@@ -58,6 +58,13 @@
 }
 
 /* Break point */
+@media screen and (max-width: 992px) {
+    .nav__list {
+       column-gap: 1.5rem;
+       margin-right: 2.8rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .header {
         top: initial;
@@ -69,6 +76,9 @@
         display: flex;
         justify-content: space-between;
         
+    }
+    .nav__logo {
+        margin-left:20px;
     }
     .nav__menu {
         position: fixed;
@@ -117,7 +127,7 @@
     }
 
     .nav__toggle {
-        margin-right: 40px;
+        margin-right:20px;
     }
 }
 
@@ -126,11 +136,23 @@
         justify-content: space-between;
         padding-left: 1.5rem;
     }
+    .nav__logo {
+        margin-left: -10px;
+    }
+    .nav__toggle {
+        margin-right: 10px;
+    }
 }
 
 @media screen and (max-width: 350px) {
     .nav__menu {
         padding: 2rem 0.25rem 4rem;
+    }
+    .nav__logo {
+        margin-left: -30px;
+    }
+    .nav__toggle {
+        margin-right: 25px;
     }
     .nav__list {
         column-gap: 0;
