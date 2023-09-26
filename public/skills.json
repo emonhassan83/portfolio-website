@@ -25,6 +25,16 @@
       "name": "SASS"
     },
     {
+      "_id": "64995627ed25a050b76b5c2b",
+      "image": "https://i.ibb.co/Mp31LHS/styled-components.png",
+      "name": "Styled Component"
+    },
+    {
+      "_id": "64995627ed25a050b76b5c2b",
+      "image": "https://i.ibb.co/kSJ0k6d/material-ui.png",
+      "name": "Material UI"
+    },
+    {
       "_id": "64995627b8fac4009689262b",
       "image": "https://i.ibb.co/Yfd3ynt/github.png",
       "name": "GitHub"
@@ -68,6 +78,11 @@
       "_id": "64995627ba33c118d586a1db",
       "image": "https://i.ibb.co/zh5jfTF/mongoDb.jpg",
       "name": "MongoDB"
+    },
+    {
+      "_id": "64995627ed25a050b76b5c2b",
+      "image": "https://i.ibb.co/xGfgPx0/redux.png",
+      "name": "ReduxJS"
     },
     {
       "_id": "64995627ed25a050b76b5c2b",
