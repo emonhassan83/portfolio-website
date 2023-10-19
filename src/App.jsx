@@ -11,10 +11,11 @@ import ScrollUp from "./components/ScrollUp/ScrollUp";
 import Services from "./components/Services/Services";
 import Skills from "./components/Skills/Skills";
 import Testimonial from "./components/Testimonial/Testimonial";
+import { ThemeProvider } from "./components/ThemePrvider/ThemeProvider";
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <Navbar />
       <main className="main">
         <Banner />
@@ -29,7 +30,7 @@ function App() {
       <Footer />
       <ScrollUp />
       <DarkAndLightToggle/>
-    </>
+    </ThemeProvider>
   );
 }
 
