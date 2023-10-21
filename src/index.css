@@ -152,6 +152,10 @@ color: rgb(39, 39, 39);
   align-items: center;
 }
 
+.dark-bg-color {
+  background-color: #151515;
+}
+
 /* Responsive */
 @media screen and (max-width: 992px) {
   .container {

@@ -7,8 +7,10 @@ import { BiSolidMessageSquareDetail } from "react-icons/bi";
 import { MdOutlineHomeRepairService } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import { useState } from "react";
+import { useTheme } from "../ThemePrvider/ThemeProvider";
 
 const Navbar = () => {
+  const {theme} = useTheme();
   /* Change Background Header */
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".header");
@@ -21,13 +23,13 @@ const Navbar = () => {
   const [activeNav, setActiveNav] = useState("#home");
 
   return (
-    <header className="header">
+    <header className={`header ${theme.mode === 'dark' ? 'dark-bg-color text-gray-100' : 'bg-color'}`}>
       <nav className="nav container">
-        <a href="index.html" className="nav__logo">
+        <a href="index.html" className={`nav__logo ${theme.mode === 'dark' ? 'text-gray-100' : 'text-dark-color'} `}>
           Emon
         </a>
-        <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
-          <ul className="nav__list">
+        <div className={toggle ? "nav__menu show-menu bg-color" : "nav__menu"}>
+          <ul className={`nav__list ${theme.mode === 'dark' ? 'text-gray-100' : 'text-dark-color'}`}>
             <li className="nav__item">
               <a
                 href="#home"
@@ -101,9 +103,9 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          <RxCross1 className="nav__close" onClick={() => setToggle(!toggle)} />
+          <RxCross1 className="nav__close text-dark-color" onClick={() => setToggle(!toggle)} />
         </div>
-        <div className="nav__toggle" onClick={() => setToggle(!toggle)}>
+        <div className="nav__toggle text-dark-color" onClick={() => setToggle(!toggle)}>
           <FaBars />
         </div>
       </nav>
