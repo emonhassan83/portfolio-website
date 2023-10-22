@@ -1,16 +1,34 @@
 import "./About.css";
 import AboutImg from "../../assets/about.jpg";
 import Info from "./Info";
+import { useTheme } from "../ThemePrvider/ThemeProvider";
 const About = () => {
+  const { theme } = useTheme(); // use for dark and light themes
+
   return (
-    <section className="about section" id="about">
-      <h2 className="section__title">About Me</h2>
+    <section
+      className={`about section ${
+        theme.mode === "dark" ? "dark-bg-color text-gray-100" : "bg-color"
+      }`}
+      id="about"
+    >
+      <h2
+        className={`section__title ${
+          theme.mode === "dark" ? "text-gray-100" : "text__color"
+        }`}
+      >
+        About Me
+      </h2>
       <span className="section__subtitle">My Introduction</span>
       <div className="about__container container grid">
         <img src={AboutImg} alt="" className="about__img" />
         <div className="about__data">
           <Info />
-          <p className="about__description">
+          <p
+            className={`about__description ${
+              theme.mode === "dark" ? "text-gray-100" : "text__color"
+            }`}
+          >
             MERN stack web developer, with a passion for clean code and
             user-centric design, I am committed to delivering high-quality,
             intuitive web experiences.
