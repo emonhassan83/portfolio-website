@@ -19,11 +19,14 @@
     border: 1px solid rgba(0, 0 , 0 ,0.1);
 }
 
+.bg__gray {
+    background-color: rgb(240, 239, 239);
+}
+
 .qualification__icon {
     position: absolute;
     left: -32px;
     top: 0;
-    background-color: gainsboro;
     color: var(--text-color);
     padding: 8px;
     width: 35px;
