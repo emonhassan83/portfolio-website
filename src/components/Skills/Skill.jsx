@@ -1,11 +1,17 @@
+import { useTheme } from "../ThemePrvider/ThemeProvider";
+
 const Skill = ({ singleSkill }) => {
   const { image, name } = singleSkill;
+  const { theme } = useTheme(); // use for dark and light themes
+
   return (
     <div className="skill__box">
       <div className="skill__img">
       <img src={image} alt="" />
       </div>
-      <h2 className="skill__description">{name}</h2>
+      <h2 className={`skill__description ${
+            theme.mode === "dark" ? "text-gray-100" : "text__color"
+          }`}>{name}</h2>
     </div>
   );
 };

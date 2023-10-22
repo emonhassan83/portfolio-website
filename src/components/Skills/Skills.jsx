@@ -2,9 +2,12 @@ import { useState } from 'react';
 import './Skills.css'
 import { useEffect } from 'react';
 import Skill from './Skill';
+import { useTheme } from '../ThemePrvider/ThemeProvider';
 
 const Skills = () => {
     const [skills, setSkills] = useState([]);
+    const { theme } = useTheme(); // use for dark and light themes
+
     useEffect (()=>{
         fetch('/skills.json')
         .then(res=>res.json())
@@ -12,8 +15,12 @@ const Skills = () => {
     }, [])
  
     return (
-        <section className='skills section' id='skills'>
-            <h2 className="section__title">Skills</h2>
+        <section className={`skills section ${
+            theme.mode === "dark" ? "dark-bg-color text-gray-100" : "bg-color"
+          }`} id='skills'>
+            <h2 className={`section__title ${
+            theme.mode === "dark" ? "text-gray-100" : "text__color"
+          }`}>Skills</h2>
             <span className="section__subtitle">My technical level</span>
             <div className="skills__container container grid">
                 {
