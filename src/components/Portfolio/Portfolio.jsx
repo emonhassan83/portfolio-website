@@ -17,12 +17,21 @@ const Portfolio = () => {
   };
 
   return (
-    <section className={`portfolio section ${
-      theme.mode === "dark"
-        ? "dark-bg-color text-gray-100"
-        : "bg-color title__color"
-    }`} id="portfolio">
-      <h2 className="section__title">Portfolio</h2>
+    <section
+      className={`portfolio section ${
+        theme.mode === "dark"
+          ? "dark-bg-color text-gray-100"
+          : "bg-color title__color"
+      }`}
+      id="portfolio"
+    >
+      <h2
+        className={`section__title ${
+          theme.mode === "dark" ? "text-gray-100" : "text__color"
+        }`}
+      >
+        Portfolio
+      </h2>
       <span className="section__subtitle">Most recent work</span>
 
       <div className="portfolio__container container">
@@ -30,24 +39,41 @@ const Portfolio = () => {
         <div className="portfolio__content grid">
           <img className="portfolio__img" src={img1} alt="" />
           <div className="portfolio__data">
-            <h3 className="portfolio__title">Artistry Academia</h3>
+            <h3
+              className={`portfolio__title ${
+                theme.mode === "dark" ? "text-gray-100" : "text__color"
+              }`}
+            >
+              Artistry Academia
+            </h3>
             <p className="portfolio__description">
               MingleMotion Express is a versatile video editing platform,
               empowering users to create professional-quality videos. It excels
               in both front-end and back-end development, with a streamlined
               dashboard implementation.
             </p>
-            <span onClick={() => toggleTab(1)} className="portfolio__button">
+            <span
+              onClick={() => toggleTab(1)}
+              className={`portfolio__button ${
+                theme.mode === "dark" ? "text-gray-100" : "text__color"
+              }`}
+            >
               Demo
               <AiOutlineArrowRight className="portfolio__button-icon" />
             </span>
 
             <div
-              className={
-                toggleState === 1
-                  ? "portfolio__modal active-modal"
-                  : "portfolio__modal"
+              className={`
+               ${
+                 toggleState === 1
+                   ? "portfolio__modal active-modal"
+                   : "portfolio__modal"
+               } ${
+                theme.mode === "dark"
+                  ? "dark-bg-color text-gray-100"
+                  : "bg-color title__color"
               }
+              `}
             >
               <div className="portfolio__modal-container">
                 <div className="portfolio__modal-img">
@@ -60,7 +86,13 @@ const Portfolio = () => {
                     className="portfolio__modal-close"
                   />
 
-                  <h3 className="portfolio__modal-title">Artistry Academia</h3>
+                  <h3
+                    className={`portfolio__modal-title ${
+                      theme.mode === "dark" ? "text-gray-100" : "text__color"
+                    }`}
+                  >
+                    Artistry Academia
+                  </h3>
                   <p className="portfolio__modal-time"></p>
                   <h6 className="portfolio__modal-features-title">Features:</h6>
                   <ul className="portfolio__modal-features">
@@ -144,24 +176,41 @@ const Portfolio = () => {
         <div className="portfolio__content grid">
           <img className="portfolio__img" src={img2} alt="" />
           <div className="portfolio__data">
-            <h3 className="portfolio__title">Artistry Academia</h3>
+            <h3
+              className={`portfolio__title ${
+                theme.mode === "dark" ? "text-gray-100" : "text__color"
+              }`}
+            >
+              Artistry Academia
+            </h3>
             <p className="portfolio__description">
               Artistry Academia is a summer camp school & that allows students
               to enroll and learn specific art activities. It excels in
               front-end and back-end development, with implementing an efficient
               and user-friendly dashboard.
             </p>
-            <span onClick={() => toggleTab(2)} className="portfolio__button">
+            <span
+              onClick={() => toggleTab(2)}
+              className={`portfolio__button ${
+                theme.mode === "dark" ? "text-gray-100" : "text__color"
+              }`}
+            >
               Demo
               <AiOutlineArrowRight className="portfolio__button-icon" />
             </span>
 
             <div
-              className={
-                toggleState === 2
-                  ? "portfolio__modal active-modal"
-                  : "portfolio__modal"
+              className={`
+               ${
+                 toggleState === 2
+                   ? "portfolio__modal active-modal"
+                   : "portfolio__modal"
+               } ${
+                theme.mode === "dark"
+                  ? "dark-bg-color text-gray-100"
+                  : "bg-color title__color"
               }
+              `}
             >
               <div className="portfolio__modal-container">
                 <div className="portfolio__modal-img">
@@ -174,7 +223,13 @@ const Portfolio = () => {
                     className="portfolio__modal-close"
                   />
 
-                  <h3 className="portfolio__modal-title">Artistry Academia</h3>
+                  <h3
+                    className={`portfolio__modal-title ${
+                      theme.mode === "dark" ? "text-gray-100" : "text__color"
+                    }`}
+                  >
+                    Artistry Academia
+                  </h3>
                   <p className="portfolio__modal-time"></p>
                   <h6 className="portfolio__modal-features-title">Features:</h6>
                   <ul className="portfolio__modal-features">
@@ -255,24 +310,41 @@ const Portfolio = () => {
         <div className="portfolio__content grid">
           <img className="portfolio__img" src={img3} alt="" />
           <div className="portfolio__data">
-            <h3 className="portfolio__title">Toy Town</h3>
+            <h3
+              className={`portfolio__title ${
+                theme.mode === "dark" ? "text-gray-100" : "text__color"
+              }`}
+            >
+              Toy Town
+            </h3>
             <p className="portfolio__description">
               Toy Town is an online retail platform specializing in the sale of
               a diverse range of toys and related products. It prioritizes
               front-end and back-end development, and integrating a robust
               dashboard system into its core operations.
             </p>
-            <span onClick={() => toggleTab(3)} className="portfolio__button">
+            <span
+              onClick={() => toggleTab(3)}
+              className={`portfolio__button ${
+                theme.mode === "dark" ? "text-gray-100" : "text__color"
+              }`}
+            >
               Demo
               <AiOutlineArrowRight className="portfolio__button-icon" />
             </span>
 
             <div
-              className={
-                toggleState === 3
-                  ? "portfolio__modal active-modal"
-                  : "portfolio__modal"
+              className={`
+               ${
+                 toggleState === 3
+                   ? "portfolio__modal active-modal"
+                   : "portfolio__modal"
+               } ${
+                theme.mode === "dark"
+                  ? "dark-bg-color text-gray-100"
+                  : "bg-color title__color"
               }
+              `}
             >
               <div className="portfolio__modal-container">
                 <div className="portfolio__modal-img">
@@ -285,27 +357,35 @@ const Portfolio = () => {
                     className="portfolio__modal-close"
                   />
 
-                  <h3 className="portfolio__modal-title">Toy Town</h3>
+                  <h3
+                    className={`portfolio__modal-title ${
+                      theme.mode === "dark" ? "text-gray-100" : "text__color"
+                    }`}
+                  >
+                    Toy Town
+                  </h3>
                   <p className="portfolio__modal-time"></p>
                   <h6 className="portfolio__modal-features-title">Features:</h6>
                   <ul className="portfolio__modal-features">
                     <li className="portfolio__modal-feature">
                       <VscDebugBreakpointLog className="portfolio__modal-icon" />
                       <p className="portfolio__modal-info">
-                        Use two-way login systems via Firebase, private routes & ensure user data privacy and protection.
+                        Use two-way login systems via Firebase, private routes &
+                        ensure user data privacy and protection.
                       </p>
                     </li>
                     <li className="portfolio__modal-feature">
                       <VscDebugBreakpointLog className="portfolio__modal-icon" />
                       <p className="portfolio__modal-info">
-                        It focus on a streamlined dashboard implementation and state management use Redux.
+                        It focus on a streamlined dashboard implementation and
+                        state management use Redux.
                       </p>
                     </li>
                     <li className="portfolio__modal-feature">
                       <VscDebugBreakpointLog className="portfolio__modal-icon" />
                       <p className="portfolio__modal-info">
-                        Implemented React Router, React Hook Form,
-                        use AOS package for simple animation, dynamic title.
+                        Implemented React Router, React Hook Form, use AOS
+                        package for simple animation, dynamic title.
                       </p>
                     </li>
                     <li className="portfolio__modal-feature">
@@ -317,7 +397,8 @@ const Portfolio = () => {
                     <li className="portfolio__modal-feature">
                       <VscDebugBreakpointLog className="portfolio__modal-icon" />
                       <p className="portfolio__modal-info">
-                        Use Tailwind CSS framework for developing a responsive website.
+                        Use Tailwind CSS framework for developing a responsive
+                        website.
                       </p>
                     </li>
                   </ul>

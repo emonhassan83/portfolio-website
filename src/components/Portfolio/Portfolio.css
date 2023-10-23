@@ -37,7 +37,6 @@
 .portfolio__button {
   display: flex;
   align-items: center;
-  color: var(--title-color);
   font-size: var(--smaller-font-size);
   align-items: center;
   column-gap: 0.25rem;
@@ -83,7 +82,6 @@
   justify-content: center;
   width: 1080px;
   position: relative;
-  background-color: var(--container-color);
   padding: 2.5rem 2.5rem 2.5rem;
   border-radius: 1.5rem;
 }
@@ -97,7 +95,6 @@
   top: 1.5rem;
   right: 1.5rem;
   font-size: 1.1rem;
-  color: var(--title-color);
   cursor: pointer;
 }
 
@@ -112,7 +109,6 @@
 .portfolio__modal-technology,
 .portfolio__modal-link {
   font-size: var(--smaller-font-size);
-  color: var(--title-color);
 }
 
 .portfolio__modal-time {
@@ -145,7 +141,6 @@
 }
 
 .portfolio__modal-icon {
-  color: var(--title-color);
   font-size: 1rem;
 }
 
