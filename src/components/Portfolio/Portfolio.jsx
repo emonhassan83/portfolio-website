@@ -6,16 +6,22 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 import { useState } from "react";
+import { useTheme } from "../ThemePrvider/ThemeProvider";
 
 const Portfolio = () => {
   const [toggleState, setToggleState] = useState(0);
+  const { theme } = useTheme(); // use for dark and light themes
 
   const toggleTab = (index) => {
     setToggleState(index);
   };
 
   return (
-    <section className="portfolio section" id="portfolio">
+    <section className={`portfolio section ${
+      theme.mode === "dark"
+        ? "dark-bg-color text-gray-100"
+        : "bg-color title__color"
+    }`} id="portfolio">
       <h2 className="section__title">Portfolio</h2>
       <span className="section__subtitle">Most recent work</span>
 

@@ -7,14 +7,20 @@
 .services__content {
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: var(--container-color);
     padding: 6rem 0 2rem 2.5rem;
+}
+
+.bg__white {
+    background-color: var(--container-color);
+}
+
+.title__color {
+    color: var(--title-color); 
 }
 
 .services__icon {
     display: block;
     font-size: 2rem;
-    color: var(--title-color);
     margin-bottom: var(--mb-1);
 }
 
@@ -27,7 +33,6 @@
 .services__button {
     display: flex;
     align-items: center;
-    color: var(--title-color);
     font-size: var(--smaller-font-size);
     align-items: center;
     column-gap: 0.25rem;
@@ -63,7 +68,6 @@
 .services__modal-content {
     width: 500px;
     position: relative;
-    background-color: var(--container-color);
     padding: 4.5rem 2.5rem 2.5rem;
     border-radius: 1.5rem;
 }
@@ -73,7 +77,6 @@
     top: 1.5rem;
     right: 1.5rem;
     font-size: 1.1rem;
-    color: var(--title-color);
     cursor: pointer;
 }
 
@@ -105,7 +108,6 @@
 }
 
 .services__modal-icon {
-  color: var(--title-color);
   font-size: 1.1rem;
 }
 

@@ -16,6 +16,14 @@
   justify-self: center;
 }
 
+.title__color {
+  color: var(--title-color);
+}
+
+.bg__white {
+  background-color: var(--container-color);
+}
+
 .portfolio__title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-0-5);

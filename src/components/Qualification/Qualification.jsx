@@ -13,7 +13,7 @@ const Qualification = () => {
       }`}
       id="qualification"
     >
-      <h2  className={`section__title ${
+      <h2 className={`section__title ${
           theme.mode === "dark" ? "text-gray-100" : "text__color"
         }`}>Education & Experience</h2>
       <span className="section__subtitle">My personal journey</span>
