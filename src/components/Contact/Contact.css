@@ -20,7 +20,7 @@
 }
 
 .contact__card {
-    background-color: var(--container-color);
+    
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1rem;
     border-radius: 0.75rem;
@@ -98,13 +98,17 @@
     z-index: 1;
 }
 
+.bg__white {
+    background-color: var(--body-color); 
+}
+
 .contact__form-tag {
     position: absolute;
     top: -0.75rem;
     left: 1.25rem;
     font-size: var(--smaller-font-size);
     padding: 0.25rem;
-    background-color: var(--body-color);
+    
     z-index: 10;
 }
 
