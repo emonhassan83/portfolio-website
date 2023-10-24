@@ -15,9 +15,9 @@ const Testimonial = () => {
 
   return (
     <section
-      className={`testimonial container section ${
+      className={`testimonial  section ${
         theme.mode === "dark"
-          ? "dark-bg-color text-gray-100"
+          ? "dark-bg-color text-gray-100 w-[100%]"
           : "bg-color title__color"
       }`}
       id="testimonial"
