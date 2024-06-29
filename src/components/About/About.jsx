@@ -21,7 +21,7 @@ const About = () => {
       </h2>
       <span className="section__subtitle">My Introduction</span>
       <div className="about__container container grid">
-        <img src={AboutImg} alt="" className="about__img" />
+        <img src={AboutImg} alt="About Image" className="about__img" />
         <div className="about__data">
           <Info />
           <p
@@ -29,7 +29,7 @@ const About = () => {
               theme.mode === "dark" ? "text-gray-100" : "text__color"
             }`}
           >
-            MERN stack web developer, with a passion for clean code and
+            Full stack web developer, with a passion for clean code and
             user-centric design, I am committed to delivering high-quality,
             intuitive web experiences.
           </p>

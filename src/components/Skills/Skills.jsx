@@ -6,7 +6,7 @@ import { useTheme } from '../ThemePrvider/ThemeProvider';
 
 const Skills = () => {
     const [skills, setSkills] = useState([]);
-    const { theme } = useTheme(); // use for dark and light themes
+    const { theme } = useTheme(); //* use for dark and light themes
 
     useEffect (()=>{
         fetch('/skills.json')
@@ -24,7 +24,7 @@ const Skills = () => {
             <span className="section__subtitle">My technical level</span>
             <div className="skills__container container grid">
                 {
-                    skills.map(singleSkill => <Skill key={singleSkill._id} singleSkill={singleSkill}/>)
+                    skills.map((singleSkill, index) => <Skill key={index} singleSkill={singleSkill}/>)
                 }
             </div>
         </section>

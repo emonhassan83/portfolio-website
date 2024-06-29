@@ -1,6 +1,5 @@
 import { useTheme } from "../ThemePrvider/ThemeProvider";
 
-/* eslint-disable react/no-unescaped-entities */
 const BannerText = () => {
   const { theme } = useTheme(); // use for dark and light themes
   return (
@@ -73,7 +72,7 @@ const BannerText = () => {
           theme.mode === "dark" ? "text-gray-100" : "text__color"
         }`}
       >
-        I'm creative web Developer and delivering high-quality, user-centric
+        I'm creative Full Stack web Developer and delivering high-quality, user-centric
         design. I'm very passionate and dedicated to my work.
       </p>
       <a
