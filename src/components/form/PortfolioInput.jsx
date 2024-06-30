@@ -1,9 +1,9 @@
 import { Controller } from "react-hook-form";
 
-const ReusableInput = ({ type, name, label, placeholder, defaultValue, setValue }) => {
+const PortfolioInput = ({ type, name, label, placeholder, defaultValue, setValue }) => {
   return (
-    <div style={{ marginBottom: "7px" }}>
-      <p style={{ marginBottom: "5px", fontSize: "14px" }}>{label ? label : null}</p>
+    <div style={{ marginBottom: "16px" }}>
+      <p style={{ marginBottom: "7px", fontSize: "14px" }}>{label ? label : null}</p>
       <Controller
         name={name}
         render={({ field }) => (
@@ -22,4 +22,4 @@ const ReusableInput = ({ type, name, label, placeholder, defaultValue, setValue 
   );
 };
 
-export default ReusableInput;
+export default PortfolioInput;

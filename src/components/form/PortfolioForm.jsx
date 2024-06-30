@@ -3,7 +3,7 @@ import {
     useForm,
   } from "react-hook-form";
   
-  const ReusableForm = ({
+  const PortfolioForm = ({
     onSubmit,
     children,
     defaultValues,
@@ -34,5 +34,5 @@ import {
     );
   };
   
-  export default ReusableForm;
+  export default PortfolioForm;
   

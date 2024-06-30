@@ -1,6 +1,6 @@
 import { Controller } from "react-hook-form";
 
-const ReusableTextArea = ({ type, name, label, placeholder }) => {
+const PortfolioTextArea = ({ type, name, label, placeholder }) => {
   return (
     <div style={{ marginBottom: "7px" }}>
       <p style={{ marginBottom: "5px", fontSize: "14px" }}>{label ? label : null}</p>
@@ -20,4 +20,4 @@ const ReusableTextArea = ({ type, name, label, placeholder }) => {
   );
 };
 
-export default ReusableTextArea;
+export default PortfolioTextArea;
