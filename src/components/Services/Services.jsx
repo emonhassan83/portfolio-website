@@ -7,7 +7,7 @@ import { useTheme } from "../ThemePrvider/ThemeProvider";
 
 const Services = () => {
   const [toggleState, setToggleState] = useState(0);
-  const { theme } = useTheme(); // use for dark and light themes
+  const { theme } = useTheme(); //* use for dark and light themes
 
   const toggleTab = (index) => {
     setToggleState(index);
@@ -234,7 +234,7 @@ const Services = () => {
                 theme.mode === "dark" ? "text-gray-100" : "title__color"
               }`}
             >
-              Backend <br />
+              Full Stack <br />
               Developer
             </h3>
           </div>
@@ -266,7 +266,7 @@ const Services = () => {
                   theme.mode === "dark" ? "text-gray-100" : "text__color"
                 }`}
               >
-                Backend Developer
+                Full Stack Developer
               </h3>
               <p className="services__modal-description">
                 Powers websites with server-side programming, databases, and

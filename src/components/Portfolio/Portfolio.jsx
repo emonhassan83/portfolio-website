@@ -7,10 +7,11 @@ import { RxCross1 } from "react-icons/rx";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 import { useState } from "react";
 import { useTheme } from "../ThemePrvider/ThemeProvider";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   const [toggleState, setToggleState] = useState(0);
-  const { theme } = useTheme(); // use for dark and light themes
+  const { theme } = useTheme(); //* use for dark and light themes
 
   const toggleTab = (index) => {
     setToggleState(index);
@@ -440,6 +441,14 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="text-center">
+        <Link to="/projects">
+          <button className="btn bg-gray-900 hover:bg-gray-800 text-white rounded-xl gap-0 capitalize">
+            Explore More
+          </button>
+        </Link>
       </div>
     </section>
   );

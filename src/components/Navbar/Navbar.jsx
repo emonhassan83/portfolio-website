@@ -8,13 +8,13 @@ import { MdOutlineHomeRepairService } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import { useState } from "react";
 import { useTheme } from "../ThemePrvider/ThemeProvider";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const { theme } = useTheme(); // use for dark and light themes
-  /* Change Background Header */
+  const { theme } = useTheme(); //* use for dark and light themes
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".header");
-    // when the scroll is higher than 200 viewport height, aee the scroll-header class to a tag with the header tag
+    //* when the scroll is higher than 200 viewport height, aee the scroll-header class to a tag with the header tag
     if (this.scrollY >= 80) header.classList.add("scroll-header");
     else header.classList.remove("scroll-header");
   });
@@ -29,14 +29,14 @@ const Navbar = () => {
       }`}
     >
       <nav className="nav container">
-        <a
-          href="index.html"
+        <Link
+          to="/"
           className={`nav__logo ${
             theme.mode === "dark" ? "text-gray-100" : "text-dark-color"
           } `}
         >
           Emon
-        </a>
+        </Link>
         <div
           className={`${toggle ? "nav__menu show-menu" : "nav__menu"} ${
             theme.mode === "dark"
