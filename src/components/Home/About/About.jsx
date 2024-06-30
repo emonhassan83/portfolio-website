@@ -1,9 +1,10 @@
 import "./About.css";
-import AboutImg from "../../assets/about.jpg";
+import AboutImg from "../../../assets/about.jpg";
 import Info from "./Info";
-import { useTheme } from "../ThemePrvider/ThemeProvider";
+import { useTheme } from "../../../lib/ThemeProvider";
+
 const About = () => {
-  const { theme } = useTheme(); // use for dark and light themes
+  const { theme } = useTheme(); //* use for dark and light themes
 
   return (
     <section

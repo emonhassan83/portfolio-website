@@ -1,7 +1,7 @@
 import "./Qualification.css";
 import { RiGraduationCapLine } from "react-icons/ri";
 import { BsBriefcase } from "react-icons/bs";
-import { useTheme } from "../ThemePrvider/ThemeProvider";
+import { useTheme } from "../../../lib/ThemeProvider";
 
 const Qualification = () => {
   const { theme } = useTheme(); //* use for dark and light themes

@@ -1,7 +1,7 @@
 import { AiOutlineInstagram } from "react-icons/ai";
 import { CiLinkedin } from "react-icons/ci";
 import { FiGithub } from "react-icons/fi";
-import { useTheme } from "../ThemePrvider/ThemeProvider";
+import { useTheme } from "../../../lib/ThemeProvider";
 
 const Social = () => {
   const { theme } = useTheme(); // use for dark and light themes

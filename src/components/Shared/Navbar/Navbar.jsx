@@ -7,7 +7,7 @@ import { BiSolidMessageSquareDetail } from "react-icons/bi";
 import { MdOutlineHomeRepairService } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import { useState } from "react";
-import { useTheme } from "../ThemePrvider/ThemeProvider";
+import { useTheme } from "../../../lib/ThemeProvider";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {

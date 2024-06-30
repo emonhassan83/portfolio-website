@@ -7,11 +7,11 @@ import {
 import { RiMessengerLine } from "react-icons/ri";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { useTheme } from "../ThemePrvider/ThemeProvider";
+import { useTheme } from "../../../lib/ThemeProvider";
 
 const Contact = () => {
   const form = useRef();
-  const { theme } = useTheme(); // use for dark and light themes
+  const { theme } = useTheme(); //* use for dark and light themes
 
   const sendEmail = (e) => {
     e.preventDefault();

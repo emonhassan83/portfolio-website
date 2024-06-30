@@ -1,4 +1,5 @@
-import { useTheme } from "../ThemePrvider/ThemeProvider";
+import { useTheme } from "../../../lib/ThemeProvider";
+
 
 const Skill = ({ singleSkill }) => {
   const { image, name } = singleSkill;

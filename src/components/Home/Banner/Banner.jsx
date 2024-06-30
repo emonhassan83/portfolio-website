@@ -1,4 +1,4 @@
-import { useTheme } from "../ThemePrvider/ThemeProvider";
+import { useTheme } from "../../../lib/ThemeProvider";
 import "./Banner.css";
 import BannerText from "./BannerText";
 import ScrollDown from "./ScrollDown";

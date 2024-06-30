@@ -3,7 +3,7 @@ import { AiOutlineArrowRight, AiOutlineCheckCircle } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
 import { BsCode, BsWindowSidebar, BsJournalCode } from "react-icons/bs";
 import { useState } from "react";
-import { useTheme } from "../ThemePrvider/ThemeProvider";
+import { useTheme } from "../../../lib/ThemeProvider";
 
 const Services = () => {
   const [toggleState, setToggleState] = useState(0);

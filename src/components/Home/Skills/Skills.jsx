@@ -2,7 +2,8 @@ import { useState } from 'react';
 import './Skills.css'
 import { useEffect } from 'react';
 import Skill from './Skill';
-import { useTheme } from '../ThemePrvider/ThemeProvider';
+import { useTheme } from '../../../lib/ThemeProvider';
+
 
 const Skills = () => {
     const [skills, setSkills] = useState([]);

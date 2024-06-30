@@ -1,13 +1,13 @@
 import "./Portfolio.css";
-import img1 from "../../assets/project_img/project1.png";
-import img2 from "../../assets/project_img/project2.png";
-import img3 from "../../assets/project_img/project3.png";
+import img1 from "../../../assets/project_img/project1.png";
+import img2 from "../../../assets/project_img/project2.png";
+import img3 from "../../../assets/project_img/project3.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 import { useState } from "react";
-import { useTheme } from "../ThemePrvider/ThemeProvider";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../../lib/ThemeProvider";
 
 const Portfolio = () => {
   const [toggleState, setToggleState] = useState(0);

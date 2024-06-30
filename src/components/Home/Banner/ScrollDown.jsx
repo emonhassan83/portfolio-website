@@ -1,5 +1,5 @@
 import { AiOutlineArrowDown } from "react-icons/ai";
-import { useTheme } from "../ThemePrvider/ThemeProvider";
+import { useTheme } from "../../../lib/ThemeProvider";
 
 const ScrollDown = () => {
   const { theme } = useTheme(); // use for dark and light themes

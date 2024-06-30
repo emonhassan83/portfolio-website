@@ -1,11 +1,11 @@
-import About from "../../components/About/About";
-import Banner from "../../components/Banner/Banner";
-import Contact from "../../components/Contact/Contact";
-import Portfolio from "../../components/Portfolio/Portfolio";
-import Qualification from "../../components/Qualification/Qualification";
-import Services from "../../components/Services/Services";
-import Skills from "../../components/Skills/Skills";
-import Testimonial from "../../components/Testimonial/Testimonial";
+import Banner from "../../components/Home/Banner/Banner";
+import About from "../../components/Home/About/About";
+import Skills from "../../components/Home/Skills/Skills";
+import Qualification from "../../components/Home/Qualification/Qualification";
+import Services from "../../components/Home/Services/Services";
+import Portfolio from "../../components/Home/Portfolio/Portfolio";
+import Testimonial from "../../components/Home/Testimonial/Testimonial";
+import Contact from "../../components/Home/Contact/Contact";
 
 const HomePage = () => {
   return (

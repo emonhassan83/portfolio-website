@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay"; // Import Swiper CSS for autoplay
 import { Pagination, Autoplay } from "swiper"; // Import Autoplay module
-import { useTheme } from "../ThemePrvider/ThemeProvider";
+import { useTheme } from "../../../lib/ThemeProvider";
 
 const Testimonial = () => {
   const { theme } = useTheme(); //* use for dark and light themes

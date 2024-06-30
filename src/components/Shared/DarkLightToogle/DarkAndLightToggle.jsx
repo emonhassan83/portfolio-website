@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useTheme } from "../ThemePrvider/ThemeProvider";
+import { useTheme } from "../../../lib/ThemeProvider";
 
 const DarkAndLightToggle = () => {
 

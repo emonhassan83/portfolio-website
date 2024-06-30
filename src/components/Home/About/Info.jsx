@@ -1,9 +1,9 @@
 import { FiAward } from "react-icons/fi";
 import { BiBriefcaseAlt, BiSupport } from "react-icons/bi";
-import { useTheme } from "../ThemePrvider/ThemeProvider";
+import { useTheme } from "../../../lib/ThemeProvider";
 
 const Info = () => {
-  const { theme } = useTheme(); // use for dark and light themes
+  const { theme } = useTheme(); //* use for dark and light themes
 
   return (
     <div className={`about__info grid `}>

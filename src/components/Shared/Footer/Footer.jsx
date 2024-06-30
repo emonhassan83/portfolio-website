@@ -1,7 +1,7 @@
 import "./Footer.css";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { BsFacebook, BsTwitter } from "react-icons/bs";
-import { useTheme } from "../ThemePrvider/ThemeProvider";
+import { useTheme } from "../../../lib/ThemeProvider";
 
 const Footer = () => {
   const { theme } = useTheme(); // use for dark and light themes

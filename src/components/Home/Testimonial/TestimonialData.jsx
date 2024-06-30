@@ -1,7 +1,7 @@
-import Image1 from "../../assets/testimonial/testimonial1.png";
-import Image2 from "../../assets/testimonial/testimonial2.png";
-import Image3 from "../../assets/testimonial/testimonial3.png";
-import Image4 from "../../assets/testimonial/testimonial4.png";
+import Image1 from "../../../assets/testimonial/testimonial1.png";
+import Image2 from "../../../assets/testimonial/testimonial2.png";
+import Image3 from "../../../assets/testimonial/testimonial3.png";
+import Image4 from "../../../assets/testimonial/testimonial4.png";
 
 export const TestimonialData = [
   {

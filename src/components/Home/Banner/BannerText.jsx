@@ -1,4 +1,4 @@
-import { useTheme } from "../ThemePrvider/ThemeProvider";
+import { useTheme } from "../../../lib/ThemeProvider";
 
 const BannerText = () => {
   const { theme } = useTheme(); // use for dark and light themes
