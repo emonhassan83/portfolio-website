@@ -2,11 +2,14 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AiOutlineBars } from "react-icons/ai";
 import { BsFillHouseAddFill } from "react-icons/bs";
-
 import { useTheme } from "../../../lib/ThemeProvider";
+import SidebarItem from "./SidebarItem";
+// import { useGetMyProfileQuery } from "../../../redux/features/userApi";
 
 const Sidebar = () => {
-  const { theme } = useTheme(); // for using light and dark themes
+  // const {data, isLoading} = useGetMyProfileQuery();
+  const { theme } = useTheme(); //* for using light and dark themes
+  // console.log({data, isLoading});
 
   const [isActive, setActive] = useState("false");
   const handleToggle = () => {
@@ -74,15 +77,8 @@ const Sidebar = () => {
 
           {/* Nav Items */}
           <div className="flex flex-col justify-between flex-1 mt-6">
-            {/* {role && role === "admin" ? (
-              <>
-                <AdminSidebar />
-              </>
-            ) : role === "instructor" ? (
-              <InstructorSidebar />
-            ) : (
-              <StudentSidebar />
-            )} */}
+            {/* Create dynamic if user role is admin */}
+            <SidebarItem />
           </div>
         </div>
 

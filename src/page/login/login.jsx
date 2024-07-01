@@ -1,11 +1,27 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PortfolioForm from "../../components/form/PortfolioForm";
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import PortfolioInput from "../../components/form/PortfolioInput";
+import { useLoginMutation } from "../../redux/features/authApi";
 
 const LoginPage = () => {
+  const [login] = useLoginMutation();
+  const navigate = useNavigate();
+
   const onSubmit = async (data) => {
-    console.log(data);
+    try {
+      console.log(data);
+      const res = await login(data);
+
+      if (res.data) {
+        toast.success("User login successfully!");
+        navigate("/");
+        //* set token in localStorage
+      }
+    } catch (error) {
+      toast.error(error.message);
+      console.error(error.message);
+    }
   };
 
   return (
