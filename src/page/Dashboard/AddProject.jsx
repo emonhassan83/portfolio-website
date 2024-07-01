@@ -27,8 +27,8 @@ const AddProject = () => {
   return (
     <div className="md:flex justify-center items-center md:h-[100vh]">
       <Toaster />
-      <div className="mt-6 bg-gray-50 w-[480px] h-[800px] rounded-md p-10 mx-auto shadow-md border-slate-950">
-        <h2 className="text-xl sm:text-2xl font-bold text-center mb-2">
+      <div className="bg-gray-50 w-full h-[760px] rounded-md p-10 mx-auto shadow-md border-slate-950">
+        <h2 className="text-xl sm:text-2xl font-bold text-center mb-6">
           Add Project
         </h2>
         <PortfolioForm onSubmit={onSubmit}>
@@ -60,7 +60,7 @@ const AddProject = () => {
             label="Technologies"
             placeholder="Enter Project Technologies ..."
           />
-          <div className="sm:flex justify-center items-center gap-4">
+          <div className="sm:flex w-full justify-center items-center gap-4">
             <PortfolioInput
               type="text"
               name="duration"
@@ -74,7 +74,7 @@ const AddProject = () => {
               placeholder="Enter Live Site Url ..."
             />
           </div>
-          <div className="sm:flex justify-center items-center gap-4">
+          <div className="sm:flex w-full justify-center items-center gap-4">
             <PortfolioInput
               type="text"
               name="client_site_url"
@@ -91,7 +91,7 @@ const AddProject = () => {
 
           <input
             type="submit"
-            value="Register"
+            value="Add A Project"
             className="btn btn-color border-none btn-block rounded-3xl mt-4"
           />
         </PortfolioForm>

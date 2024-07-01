@@ -2,7 +2,7 @@ import { Controller } from "react-hook-form";
 
 const PortfolioInput = ({ type, name, label, placeholder, defaultValue, setValue }) => {
   return (
-    <div style={{ marginBottom: "16px" }}>
+    <div style={{ marginBottom: "16px", width: "100%" }}>
       <p style={{ marginBottom: "7px", fontSize: "14px" }}>{label ? label : null}</p>
       <Controller
         name={name}

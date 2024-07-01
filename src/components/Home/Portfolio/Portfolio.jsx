@@ -173,6 +173,7 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
+
         {/* 2nd Project */}
         <div className="portfolio__content grid">
           <img className="portfolio__img" src={img2} alt="" />
@@ -307,6 +308,7 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
+        
         {/* 3rd Project */}
         <div className="portfolio__content grid">
           <img className="portfolio__img" src={img3} alt="" />

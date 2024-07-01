@@ -20,7 +20,7 @@ const RegisterPage = () => {
       const user = verifyToken(res.data.accessToken);
 
       if (res.success) {
-        toast.success("User login successfully!");
+        toast.success("User register successfully!");
         dispatch(setUser({ user: user, token: res.data.accessToken }));
         navigate("/");
       }

@@ -5,8 +5,8 @@ import { useGetAllProjectsQuery } from "../../redux/features/projectApi";
 const ManageProject = () => {
   const { data } = useGetAllProjectsQuery();
   const { theme } = useTheme(); //* for using light and dark themes
+  // console.log(data);
 
-  console.log(data);
   return (
     <div>
       <div className="overflow-x-auto">
@@ -23,17 +23,16 @@ const ManageProject = () => {
           >
             <tr>
               <th>SL</th>
-              <th>Class Image</th>
-              <th>ClassName</th>
-              <th>Instructors name</th>
-              <th>Available seats</th>
+              <th>Project Image</th>
+              <th>Project Name </th>
+              <th>Duration</th>
               <th>Action</th>
-              <th>Pay</th>
+              <th>Details</th>
             </tr>
           </thead>
           <tbody>
-            {data?.length > 0 &&
-              data?.map((project, index) => (
+            {data?.data?.length > 0 &&
+              data?.data?.map((project, index) => (
                 <ManageProjectRow
                   key={project._id}
                   project={project}

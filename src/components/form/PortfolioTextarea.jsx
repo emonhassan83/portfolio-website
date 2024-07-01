@@ -1,8 +1,8 @@
 import { Controller } from "react-hook-form";
 
-const PortfolioTextArea = ({ type, name, label, placeholder }) => {
+const PortfolioTextArea = ({ type, name, label, placeholder, height }) => {
   return (
-    <div style={{ marginBottom: "7px" }}>
+    <div style={{ marginBottom: "7px", width: "100%" }}>
       <p style={{ marginBottom: "5px", fontSize: "14px" }}>{label ? label : null}</p>
       <Controller
         name={name}
@@ -12,7 +12,7 @@ const PortfolioTextArea = ({ type, name, label, placeholder }) => {
             id={name}
             placeholder={placeholder}
             {...field}
-            className={`textarea textarea-bordered h-28`}
+            className={`textarea textarea-bordered w-full h-[${height}]`}
           ></textarea>
         )}
       />

@@ -1,15 +1,15 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AiOutlineBars } from "react-icons/ai";
 import { BsFillHouseAddFill } from "react-icons/bs";
 import { useTheme } from "../../../lib/ThemeProvider";
 import SidebarItem from "./SidebarItem";
-// import { useGetMyProfileQuery } from "../../../redux/features/userApi";
+import { useGetMyProfileQuery } from "../../../redux/features/userApi";
 
 const Sidebar = () => {
-  // const {data, isLoading} = useGetMyProfileQuery();
+  const {data} = useGetMyProfileQuery();
   const { theme } = useTheme(); //* for using light and dark themes
-  // console.log({data, isLoading});
+  const user = data?.data;
 
   const [isActive, setActive] = useState("false");
   const handleToggle = () => {
@@ -24,11 +24,11 @@ const Sidebar = () => {
           theme.mode === "dark" ? "text-gray-100 " : "text-gray-800 bg-gray-100"
         }`}
       >
-        <Link to="/" className="cursor-pointer">
+        {/* <Link to="/" className="cursor-pointer">
           <div className="block cursor-pointer p-4 font-bold">
             <img className="w-40" src={""} alt="Dashboard Logo" />
           </div>
-        </Link>
+        </Link> */}
 
         <button
           onClick={handleToggle}
@@ -54,23 +54,23 @@ const Sidebar = () => {
         <div>
           {/* Branding & Profile Info */}
           <div>
-            <div className="w-full hidden md:flex py-2 justify-center items-center mx-auto">
-              <Link to="/">
+            <div className="w-full hidden md:flex justify-center items-center mx-auto">
+              {/* <Link to="/">
                 <img className="w-36 -mt-4" src={"logo"} alt="Dashboard Logo" />
-              </Link>
+              </Link> */}
             </div>
             <div className="flex flex-col items-center mt-6 -mx-2">
               <img
                 className="object-cover w-24 h-24 mx-2 rounded-full"
-                src={"user?.photoURL"}
+                src={user?.photoURL || "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png"}
                 alt="avatar"
                 referrerPolicy="no-referrer"
               />
               <h4 className="mx-2 mt-4 font-medium hover:underline">
-                {"user?.displayName"}
+                {user?.name}
               </h4>
               <p className="mx-2 mt-1 text-sm font-medium hover:underline">
-                {"user?.email"}
+                {user?.email}
               </p>
             </div>
           </div>

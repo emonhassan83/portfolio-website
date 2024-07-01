@@ -16,7 +16,7 @@ const SidebarItem = () => {
       <>
         {/* Menu Links */}
         <NavLink
-          to="add-class"
+          to="add-project"
           className={({ isActive }) =>
             `flex items-center px-4 py-2 mt-5  transition-colors duration-300 transform  hover:bg-gray-300   hover:text-gray-700 ${
               theme.mode === "dark"
@@ -27,10 +27,10 @@ const SidebarItem = () => {
         >
           <MdOutlineManageSearch className="w-5 h-5" />
 
-          <span className="mx-4 font-medium">Add Class</span>
+          <span className="mx-4 font-medium">Add Project</span>
         </NavLink>
         <NavLink
-          to="manage-class"
+          to="manage-project"
           className={({ isActive }) =>
             `flex items-center px-4 py-2 mt-5  transition-colors duration-300 transform  hover:bg-gray-300   hover:text-gray-700 ${
               theme.mode === "dark"
@@ -41,7 +41,7 @@ const SidebarItem = () => {
         >
           <MdManageAccounts className="w-5 h-5" />
 
-          <span className="mx-4 font-medium">Manage Class</span>
+          <span className="mx-4 font-medium">Manage Project</span>
         </NavLink>
       </>
     </nav>

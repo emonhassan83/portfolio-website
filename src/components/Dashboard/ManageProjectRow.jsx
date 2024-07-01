@@ -1,57 +1,55 @@
 import { useState } from "react";
 // import PaymentModal from "../../pages/Dashboard/Payment/PaymentModal";
 
-const ManageProjectRow = ({ project, index}) => {
+const ManageProjectRow = ({ project, index }) => {
+  console.log(project);
   const [isOpen, setIsOpen] = useState(false);
 
-//   const closeModal = () => {
-//     setIsOpen(false);
-//   };
+  //   const closeModal = () => {
+  //     setIsOpen(false);
+  //   };
 
   return (
-    <>
-      <tr>
-        <td>{index + 1}</td>
-        <td>
-          <div className="flex items-center space-x-3">
-            <div className="avatar">
-              <div className="mask mask-squircle w-12 h-12">
-                <img
-                  src={project?.classInfo?.classImage}
-                  alt="Class Image"
-                />
-              </div>
+    <tr>
+      <td>{index + 1}</td>
+      <td>
+        <div className="flex items-center space-x-3">
+          <div className="avatar">
+            <div className="mask mask-squircle w-12 h-12">
+              <img src={project?.image} alt="Class Image" />
             </div>
           </div>
-        </td>
-        <td>{project?.classInfo?.className}</td>
-        <td>{project?.classInfo?.instructor?.name}</td>
-        <td>{project?.classInfo?.seats}</td>
-        <td>
+        </div>
+      </td>
+      <td>{project?.name}</td>
+      <td>{project?.duration}</td>
+      <td>
+        <div className="flex items-center">
+          <button
+            onClick={() => setIsOpen(true)}
+            className="btn btn-xs btn-color"
+          >
+            Update
+          </button>
           <button
             // onClick={() => handleDelete(project._id)}
             className="btn btn-xs btn-color"
           >
             Delete
           </button>
-        </td>
-        <td>
-          <button
-            onClick={() => setIsOpen(true)}
-            className="btn btn-xs btn-color"
-          >
-            ${project?.classInfo?.courseFree} tk.
-          </button>
+        </div>
+      </td>
+      <td>
+        <button className="btn btn-xs btn-color">Details</button>
 
-          {/* <PaymentModal
+        {/* <PaymentModal
             project={project}
             isOpen={isOpen}
             closeModal={closeModal}
             
           /> */}
-        </td>
-      </tr>
-    </>
+      </td>
+    </tr>
   );
 };
 
