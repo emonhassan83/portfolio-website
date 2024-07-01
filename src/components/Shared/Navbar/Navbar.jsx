@@ -9,9 +9,20 @@ import { RxCross1 } from "react-icons/rx";
 import { useState } from "react";
 import { useTheme } from "../../../lib/ThemeProvider";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  logout,
+  useCurrentToken,
+} from "../../../redux/features/auth/authSlice";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
+  const dispatch = useDispatch();
+  const [toggle, setToggle] = useState(false);
+  const [activeNav, setActiveNav] = useState("#home");
   const { theme } = useTheme(); //* use for dark and light themes
+  const token = useSelector(useCurrentToken);
+
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".header");
     //* when the scroll is higher than 200 viewport height, aee the scroll-header class to a tag with the header tag
@@ -19,8 +30,10 @@ const Navbar = () => {
     else header.classList.remove("scroll-header");
   });
 
-  const [toggle, setToggle] = useState(false);
-  const [activeNav, setActiveNav] = useState("#home");
+  const handleLogout = () => {
+    toast.success("User logged out successfully!");
+    dispatch(logout());
+  };
 
   return (
     <header
@@ -162,6 +175,22 @@ const Navbar = () => {
               >
                 <BiSolidMessageSquareDetail className="nav__icon" /> Contract
               </a>
+            </li>
+            <li className="-my-4 sm:my-0">
+              {token ? (
+                <button
+                  onClick={handleLogout}
+                  className="btn btn-color btn-xs sm:btn-sm btn-outline text-sm sm:text-base font-medium"
+                >
+                  Logout
+                </button>
+              ) : (
+                <Link to="/login">
+                  <button className="btn btn-color btn-xs sm:btn-sm btn-outline text-base font-medium">
+                    Login
+                  </button>
+                </Link>
+              )}
             </li>
           </ul>
           <RxCross1

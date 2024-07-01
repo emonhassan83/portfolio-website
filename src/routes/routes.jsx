@@ -7,6 +7,8 @@ import ProjectsPage from "../page/Projects/projects";
 import DashboardLayout from "../layout/DashboardLayout";
 import AddProject from "../page/Dashboard/AddProject";
 import ManageProject from "../page/Dashboard/ManageProject";
+import BlogsPage from "../page/blogs/Blogs";
+import ProtectedRoute from "./ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -21,14 +23,22 @@ const router = createBrowserRouter([
         path: "/projects",
         element: <ProjectsPage />,
       },
+      {
+        path: "/blogs",
+        element: (
+          <ProtectedRoute>
+            <BlogsPage />
+          </ProtectedRoute>
+        ),
+      },
     ],
   },
   {
     path: "/dashboard",
     element: (
-      <>
+      <ProtectedRoute>
         <DashboardLayout />
-      </>
+      </ProtectedRoute>
     ),
     children: [
       {

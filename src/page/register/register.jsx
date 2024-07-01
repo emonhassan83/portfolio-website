@@ -3,20 +3,26 @@ import PortfolioForm from "../../components/form/PortfolioForm";
 import PortfolioInput from "../../components/form/PortfolioInput";
 import { Link, useNavigate } from "react-router-dom";
 import { useRegisterUserMutation } from "../../redux/features/userApi";
+import { verifyToken } from "../../utils/verifyToken";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../redux/features/auth/authSlice";
 
 const RegisterPage = () => {
   const [registerUser] = useRegisterUserMutation();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const onSubmit = async (data) => {
     try {
-      console.log(data);
-      const res = await registerUser(data);
+      const res = await registerUser(data).unwrap();
+      // console.log(res);
 
-      if (res.data) {
-        toast.success("User register successfully!");
+      const user = verifyToken(res.data.accessToken);
+
+      if (res.success) {
+        toast.success("User login successfully!");
+        dispatch(setUser({ user: user, token: res.data.accessToken }));
         navigate("/");
-        //* set token in localStorage
       }
     } catch (error) {
       toast.error(error.message);

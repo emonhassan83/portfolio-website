@@ -26,8 +26,7 @@ const LoginPage = () => {
       if (res.success) {
         toast.success("User login successfully!");
         dispatch(setUser({ user: user, token: res.data.accessToken }));
-        // navigate("/");
-        // * set token in localStorage
+        navigate("/");
       }
     } catch (error) {
       toast.error(error.message);
