@@ -2,21 +2,32 @@ import { Link, useNavigate } from "react-router-dom";
 import PortfolioForm from "../../components/form/PortfolioForm";
 import toast, { Toaster } from "react-hot-toast";
 import PortfolioInput from "../../components/form/PortfolioInput";
-import { useLoginMutation } from "../../redux/features/authApi";
+import { useLoginMutation } from "../../redux/features/auth/authApi";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../redux/features/auth/authSlice";
+import { verifyToken } from "../../utils/verifyToken";
 
 const LoginPage = () => {
   const [login] = useLoginMutation();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const defaultValues = {
+    email: "john@example.com",
+    password: "user123",
+  };
 
   const onSubmit = async (data) => {
     try {
-      console.log(data);
-      const res = await login(data);
+      const res = await login(data).unwrap();
+      // console.log(res);
+      const user = verifyToken(res.data.accessToken);
 
-      if (res.data) {
+      if (res.success) {
         toast.success("User login successfully!");
-        navigate("/");
-        //* set token in localStorage
+        dispatch(setUser({ user: user, token: res.data.accessToken }));
+        // navigate("/");
+        // * set token in localStorage
       }
     } catch (error) {
       toast.error(error.message);
@@ -34,7 +45,7 @@ const LoginPage = () => {
         <p className="text-sm text-gray-400 text-center mb-8">
           Sign in to access your account
         </p>
-        <PortfolioForm onSubmit={onSubmit}>
+        <PortfolioForm onSubmit={onSubmit} defaultValues={defaultValues}>
           <PortfolioInput
             type="email"
             name="email"
