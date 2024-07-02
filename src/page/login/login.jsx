@@ -12,11 +12,6 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const defaultValues = {
-    email: "john@example.com",
-    password: "user123",
-  };
-
   const onSubmit = async (data) => {
     try {
       const res = await login(data).unwrap();
@@ -48,7 +43,7 @@ const LoginPage = () => {
         <p className="text-sm text-gray-400 text-center mb-8">
           Sign in to access your account
         </p>
-        <PortfolioForm onSubmit={onSubmit} defaultValues={defaultValues}>
+        <PortfolioForm onSubmit={onSubmit}>
           <PortfolioInput
             type="email"
             name="email"
