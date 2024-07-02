@@ -22,7 +22,6 @@ const LoginPage = () => {
       const res = await login(data).unwrap();
       // console.log(res);
       const user = verifyToken(res.data.accessToken);
-      console.log(user);
 
       if (res.success) {
         toast.success("User login successfully!");
