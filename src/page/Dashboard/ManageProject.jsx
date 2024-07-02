@@ -27,7 +27,6 @@ const ManageProject = () => {
               <th>Project Name </th>
               <th>Duration</th>
               <th>Action</th>
-              <th>Details</th>
             </tr>
           </thead>
           <tbody>
@@ -36,7 +35,6 @@ const ManageProject = () => {
                 <ManageProjectRow
                   key={project._id}
                   project={project}
-                //   handleDelete={handleDelete}
                   index={index}
                 />
               ))}

@@ -13,10 +13,11 @@ const AddProject = () => {
     try {
       console.log(data);
       const res = await addProject(data);
+      console.log(res);
 
-      if (res.data) {
+      if (res.data.success) {
         toast.success("Project added successfully!");
-        navigate("/manage-project");
+        navigate("/dashboard/manage-project");
       }
     } catch (error) {
       toast.error(error.message);
@@ -39,7 +40,12 @@ const AddProject = () => {
               label="Project Name"
               placeholder="Enter Project Name ..."
             />
-            <PortfolioInput type="file" name="image" label="Project Image" />
+            <PortfolioInput
+              type="text"
+              name="image"
+              label="Project Image"
+              placeholder="Project Image URL ..."
+            />
           </div>
 
           <PortfolioTextArea
