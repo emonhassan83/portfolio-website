@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import { useTheme } from "../../../lib/ThemeProvider";
 import { useGetAllProjectsQuery } from "../../../redux/features/projectApi";
 import "./Portfolio.css";
-import SinglePortfolio from "./SinglePortfolio";
+import PortfolioCard from "./PortfolioCard";
 
 const PortfolioSection = () => {
   const { data } = useGetAllProjectsQuery();
@@ -27,8 +28,15 @@ const PortfolioSection = () => {
 
       <div className="portfolio__container container">
         {
-            data.data.length> 0 && data.data.slice(0,3).map((project) => <SinglePortfolio key={project._id} project={project}/>)
+            data?.data?.length> 0 && data?.data?.slice(0,3)?.map((project) => <PortfolioCard key={project._id} project={project}/>)
         }
+      </div>
+      <div className="text-center">
+        <Link to="/projects">
+          <button className="btn bg-gray-900 hover:bg-gray-800 text-white rounded-xl gap-0 capitalize">
+            Explore More
+          </button>
+        </Link>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-const ProfileModalData = ({project}) => {
+const UpdateProjectModalData = ({project}) => {
     console.log(project);
 
     return (
@@ -8,4 +8,4 @@ const ProfileModalData = ({project}) => {
     );
 };
 
-export default ProfileModalData;
+export default UpdateProjectModalData;

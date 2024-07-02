@@ -1,8 +1,9 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useRef, useState } from "react";
 import CustomArrowButton from "../../utils/CustomArrowButton";
+import UpdateProjectModalData from "./ProfileModalData";
 
-export default function ProjectModal() {
+export default function UpdateProjectModal() {
   let [isOpen, setIsOpen] = useState(false);
   const cancelButtonRef = useRef(null);
 
@@ -62,10 +63,10 @@ export default function ProjectModal() {
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900"
                 >
-                 {/* give modal title here */}
+                  {/* give modal title here */}
                 </Dialog.Title>
                 {/* Modal Data component */}
-                <h1>Here give us project info</h1>
+                <UpdateProjectModalData />
                 <div className="mt-4">
                   <button
                     type="button"

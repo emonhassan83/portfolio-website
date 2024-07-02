@@ -1,12 +1,11 @@
 import "./Portfolio.css";
-import img1 from "../../../assets/project_img/project1.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 import { useTheme } from "../../../lib/ThemeProvider";
 import { useState } from "react";
 
-const SinglePortfolio = ({ project }) => {
+const PortfolioCard = ({ project }) => {
   const [toggleState, setToggleState] = useState(0);
   const { theme } = useTheme(); //* use for dark and light themes
   const featuresArr = project.features.split(".").map((item) => item.trim());
@@ -52,7 +51,7 @@ const SinglePortfolio = ({ project }) => {
         >
           <div className="portfolio__modal-container">
             <div className="portfolio__modal-img">
-              <img className="portfolio__modal-img" src={img1} alt="" />
+              <img className="portfolio__modal-img" src={project.image} alt="" />
             </div>
 
             <div className="portfolio__modal-content">
@@ -118,4 +117,4 @@ const SinglePortfolio = ({ project }) => {
   );
 };
 
-export default SinglePortfolio;
+export default PortfolioCard;
