@@ -1,7 +1,9 @@
 import { useTheme } from "../../../lib/ThemeProvider";
+import "./Banner.css";
 
 const BannerText = () => {
   const { theme } = useTheme(); // use for dark and light themes
+
   return (
     <div className="home__data">
       <h1
@@ -62,7 +64,7 @@ const BannerText = () => {
       </h1>
       <h3
         className={`home__subtitle ${
-          theme.mode === "dark" ? "dark-bg-color text-gray-100" : "text__color"
+          theme.mode === "dark" ? "text-gray-100" : "text__color"
         }`}
       >
         Web Developer

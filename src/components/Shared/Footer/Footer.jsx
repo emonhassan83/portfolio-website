@@ -5,6 +5,7 @@ import { useTheme } from "../../../lib/ThemeProvider";
 
 const Footer = () => {
   const { theme } = useTheme(); // use for dark and light themes
+  
   return (
     <footer
       className={`footer ${

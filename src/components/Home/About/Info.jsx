@@ -1,6 +1,7 @@
 import { FiAward } from "react-icons/fi";
 import { BiBriefcaseAlt, BiSupport } from "react-icons/bi";
 import { useTheme } from "../../../lib/ThemeProvider";
+import "./About.css";
 
 const Info = () => {
   const { theme } = useTheme(); //* use for dark and light themes
@@ -9,7 +10,7 @@ const Info = () => {
     <div className={`about__info grid `}>
       <div
         className={`about__box ${
-          theme.mode === "dark" ? "dark-bg-color text-gray-100" : "text__color"
+          theme.mode === "dark" ? "dark-bg-color text-gray-100" : "text__color bg-[#fff]"
         }`}
       >
         <FiAward className="about__icon" />
