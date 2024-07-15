@@ -3,9 +3,11 @@ import { FaBars } from "react-icons/fa";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { GrDocumentText } from "react-icons/gr";
 import { BsFillImageFill } from "react-icons/bs";
-import { BiSolidMessageSquareDetail } from "react-icons/bi";
+// import { BiSolidMessageSquareDetail } from "react-icons/bi";
 import { MdOutlineHomeRepairService } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
+import { IoIosLogIn } from "react-icons/io";
+import { CiLogout } from "react-icons/ci";
 import { useState } from "react";
 import { useTheme } from "../../../lib/ThemeProvider";
 import { Link } from "react-router-dom";
@@ -157,7 +159,7 @@ const Navbar = () => {
                 <BsFillImageFill className="nav__icon" /> Portfolio
               </a>
             </li>
-            <li className="nav__item">
+            {/* <li className="nav__item">
               <a
                 href="#contact"
                 onClick={() => setActiveNav("#contact")}
@@ -175,19 +177,27 @@ const Navbar = () => {
               >
                 <BiSolidMessageSquareDetail className="nav__icon" /> Contract
               </a>
-            </li>
-            <li className="-my-4 sm:my-0">
+            </li> */}
+            <li className="-my-4 sm:my-0 nav__item">
               {token ? (
                 <button
                   onClick={handleLogout}
-                  className="btn btn-color btn-xs sm:btn-sm btn-outline text-sm sm:text-base font-medium"
+                  className={`btn ${
+                    theme.mode === "dark" ? "text-gray-100" : "text-dark-color"
+                  } btn-xs sm:btn-sm btn-outline text-sm sm:text-base font-medium capitalize nav__link`}
                 >
-                  Logout
+                  <CiLogout className="nav__icon" /> Logout
                 </button>
               ) : (
                 <Link to="/login">
-                  <button className="btn btn-color btn-xs sm:btn-sm btn-outline text-base font-medium">
-                    Login
+                  <button
+                    className={`btn ${
+                      theme.mode === "dark"
+                        ? "text-gray-100"
+                        : "text-dark-color"
+                    } btn-xs sm:btn-sm btn-outline text-sm sm:text-base font-medium capitalize`}
+                  >
+                    <IoIosLogIn className="nav__icon" /> Login
                   </button>
                 </Link>
               )}
