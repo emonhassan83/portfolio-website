@@ -9,6 +9,9 @@ import AddProject from "../page/Dashboard/AddProject";
 import ManageProject from "../page/Dashboard/ManageProject";
 import BlogsPage from "../page/blogs/Blogs";
 import ProtectedRoute from "./ProtectedRoute";
+import ManageSkills from "../page/Dashboard/ManageSkills";
+import ManageQualification from "../page/Dashboard/ManageQualification";
+import AddBlog from "../page/Dashboard/AddBlog";
 
 const router = createBrowserRouter([
   {
@@ -46,7 +49,23 @@ const router = createBrowserRouter([
         element: <AddProject />,
       },
       {
-        path: "manage-project",
+        path: "manage-projects",
+        element: <ManageProject />,
+      },
+      {
+        path: "manage-skills",
+        element: <ManageSkills />,
+      },
+      {
+        path: "manage-qualifications",
+        element: <ManageQualification />,
+      },
+      {
+        path: "add-blog",
+        element: <AddBlog />,
+      },
+      {
+        path: "manage-blogs",
         element: <ManageProject />,
       },
     ],
