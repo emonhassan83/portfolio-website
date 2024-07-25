@@ -12,6 +12,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import ManageSkills from "../page/Dashboard/ManageSkills";
 import ManageQualification from "../page/Dashboard/ManageQualification";
 import AddBlog from "../page/Dashboard/AddBlog";
+import ManageBlogs from "../page/Dashboard/ManageBlogs";
 
 const router = createBrowserRouter([
   {
@@ -66,7 +67,7 @@ const router = createBrowserRouter([
       },
       {
         path: "manage-blogs",
-        element: <ManageProject />,
+        element: <ManageBlogs />,
       },
     ],
   },
