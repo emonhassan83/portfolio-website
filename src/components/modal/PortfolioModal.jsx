@@ -1,8 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
-import UpdateProjectModalData from "./ProfileModalData";
 
-const UpdateProjectModal = ({ closeModal, isOpen, project}) => {
+const PortfolioModal = ({ closeModal, isOpen, title, children}) => {
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -34,13 +33,16 @@ const UpdateProjectModal = ({ closeModal, isOpen, project}) => {
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900 mt-3 mb-6"
                 >
-                 Update a Project !
+                 {title}
                 </Dialog.Title>
 
-                <UpdateProjectModalData
+                {/* Content here */}
+                {children}
+
+                {/* <UpdateProjectModalData
                   project={project}
                   closeModal={closeModal}
-                />
+                /> */}
                 
                 {/* Checkout form */}
               </Dialog.Panel>
@@ -52,4 +54,4 @@ const UpdateProjectModal = ({ closeModal, isOpen, project}) => {
   );
 };
 
-export default UpdateProjectModal;
+export default PortfolioModal;

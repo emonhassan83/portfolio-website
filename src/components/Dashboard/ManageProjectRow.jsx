@@ -1,7 +1,8 @@
 import { useState } from "react";
-import UpdateProjectModal from "../modal/ProjectModal";
 import { useDeleteAProjectMutation } from "../../redux/features/projectApi";
 import toast, { Toaster } from "react-hot-toast";
+import PortfolioModal from "../modal/PortfolioModal";
+import UpdateProjectModalData from "../modal/UpdateProjectModal";
 
 const ManageProjectRow = ({ project, index }) => {
   const [deleteAProject] = useDeleteAProjectMutation();
@@ -14,7 +15,7 @@ const ManageProjectRow = ({ project, index }) => {
   const handleDelete = async (id) => {
     try {
       const res = await deleteAProject(id);
-      console.log(res);
+      // console.log(res);
       if (res.data.success) {
         toast.success("Project deleted successfully!");
       }
@@ -57,12 +58,14 @@ const ManageProjectRow = ({ project, index }) => {
           </div>
         </td>
 
-        <UpdateProjectModal
-          project={project}
+        <PortfolioModal
+          title={"Update a Project !"}
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           closeModal={closeModal}
-        />
+        >
+          <UpdateProjectModalData project={project} closeModal={closeModal} />
+        </PortfolioModal>
       </tr>
     </>
   );

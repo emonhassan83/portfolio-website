@@ -1,24 +1,26 @@
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
+import { useDeleteQualificationMutation } from "../../redux/features/qualificationApi";
 
 const ManageQualificationRow = ({ qualification, index }) => {
   //   const [isOpen, setIsOpen] = useState(false);
+  const [deleteQualification] = useDeleteQualificationMutation();
 
   //   const closeModal = () => {
   //     setIsOpen(false);
   //   };
 
-  //   const handleDelete = async (id) => {
-  //     try {
-  //       const res = await deleteAProject(id);
-  //       console.log(res);
-  //       if (res.data.success) {
-  //         toast.success("Project deleted successfully!");
-  //       }
-  //     } catch (error) {
-  //       toast.error(error.message);
-  //       console.error(error.message);
-  //     }
-  //   };
+  const handleDelete = async (id) => {
+    try {
+      const res = await deleteQualification(id);
+      console.log(res);
+      if (res.data.success) {
+        toast.success("Qualification deleted successfully!");
+      }
+    } catch (error) {
+      toast.error(error.message);
+      console.error(error.message);
+    }
+  };
 
   return (
     <>
@@ -31,13 +33,13 @@ const ManageQualificationRow = ({ qualification, index }) => {
         <td>
           <div className="flex items-center">
             <button
-              //   onClick={() => setIsOpen(true)}
+                // onClick={() => setIsOpen(true)}
               className="btn btn-xs btn-color"
             >
               Update
             </button>
             <button
-              //   onClick={() => handleDelete(qualification._id)}
+              onClick={() => handleDelete(qualification._id)}
               className="btn btn-xs btn-color"
             >
               Delete
@@ -45,12 +47,7 @@ const ManageQualificationRow = ({ qualification, index }) => {
           </div>
         </td>
 
-        {/* <UpdateProjectModal
-          qualification={qualification}
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          closeModal={closeModal}
-        /> */}
+        {/* Update Modal Here */}
       </tr>
     </>
   );

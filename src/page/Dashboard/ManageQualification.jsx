@@ -9,9 +9,10 @@ const ManageQualification = () => {
 
   return (
     <>
-      <div className="mx-auto">
+      <div className="mx-auto my-4">
         <button className="btn btn-sm">Add Qualification</button>
       </div>
+
       <div className="overflow-x-auto">
         <table
           className={`table ${
