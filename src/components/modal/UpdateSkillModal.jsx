@@ -3,12 +3,23 @@ import PortfolioForm from "../form/PortfolioForm";
 import PortfolioInput from "../form/PortfolioInput";
 import { useUpdateSkillMutation } from "../../redux/features/skillsApi";
 
-const UpdateSkillModal = ({ closeModal }) => {
+const UpdateSkillModal = ({ skill, closeModal }) => {
   const [addSkill] = useUpdateSkillMutation();
+
+  const defaultValues = {
+    name: skill?.name,
+    image: skill?.image,
+  };
 
   const onSubmit = async (data) => {
     try {
-      const res = await addSkill(data);
+      const option = {
+        id: skill._id,
+        data: data,
+      };
+
+      const res = await addSkill(option);
+      console.log(res);
       if (res.data.success) {
         toast.success("Skill update successfully!");
         closeModal();
@@ -23,7 +34,7 @@ const UpdateSkillModal = ({ closeModal }) => {
     <>
       <Toaster />
       <div className="bg-gray-50 w-full rounded-md p-10 mx-auto">
-        <PortfolioForm onSubmit={onSubmit}>
+        <PortfolioForm onSubmit={onSubmit} defaultValues={defaultValues}>
           <PortfolioInput
             type="text"
             name="name"
@@ -39,7 +50,7 @@ const UpdateSkillModal = ({ closeModal }) => {
 
           <input
             type="submit"
-            value="Add Skill"
+            value="Update Skill"
             className="btn btn-color border-none btn-block rounded-3xl mt-4"
           />
         </PortfolioForm>
