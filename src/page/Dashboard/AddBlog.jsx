@@ -17,7 +17,7 @@ const AddBlog = () => {
 
       if (res.data.success) {
         toast.success("Project added successfully!");
-        navigate("/dashboard/manage-project");
+        navigate("/dashboard/manage-blogs");
       }
     } catch (error) {
       toast.error(error.message);
@@ -60,13 +60,13 @@ const AddBlog = () => {
             label="Images"
             placeholder="Your Blog Images..."
           />
-          
-            <PortfolioInput
-              type="text"
-              name="tags"
-              label="Tags"
-              placeholder="Blog Tags..."
-            />
+
+          <PortfolioInput
+            type="text"
+            name="tags"
+            label="Tags"
+            placeholder="Blog Tags..."
+          />
 
           <input
             type="submit"

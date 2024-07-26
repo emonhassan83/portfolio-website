@@ -1,4 +1,4 @@
-import ManageProjectRow from "../../components/Dashboard/ManageProjectRow";
+import ManageBlogRow from "../../components/Dashboard/ManageBlogRow";
 import { useTheme } from "../../lib/ThemeProvider";
 import { useGetAllBlogsQuery } from "../../redux/features/blogApi";
 
@@ -8,7 +8,7 @@ const ManageBlogs = () => {
   // console.log(data);
 
   return (
-    <div>
+    <>
       <div className="overflow-x-auto">
         <table
           className={`table ${
@@ -33,7 +33,7 @@ const ManageBlogs = () => {
           <tbody>
             {data?.data?.length > 0 &&
               data?.data?.map((project, index) => (
-                <ManageProjectRow
+                <ManageBlogRow
                   key={project._id}
                   project={project}
                   index={index}
@@ -42,7 +42,7 @@ const ManageBlogs = () => {
           </tbody>
         </table>
       </div>
-    </div>
+    </>
   );
 };
 

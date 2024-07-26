@@ -1,24 +1,26 @@
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
+import { useDeleteBlogMutation } from "../../redux/features/blogApi";
 
-const ManageProjectRow = ({ blog, index }) => {
+const ManageBlogRow = ({ blog, index }) => {
   //   const [isOpen, setIsOpen] = useState(false);
+  const [deleteBlog] = useDeleteBlogMutation();
 
   //   const closeModal = () => {
   //     setIsOpen(false);
   //   };
 
-  //   const handleDelete = async (id) => {
-  //     try {
-  //       const res = await deleteAProject(id);
-  //       console.log(res);
-  //       if (res.data.success) {
-  //         toast.success("Project deleted successfully!");
-  //       }
-  //     } catch (error) {
-  //       toast.error(error.message);
-  //       console.error(error.message);
-  //     }
-  //   };
+    const handleDelete = async (id) => {
+      try {
+        const res = await deleteBlog(id);
+        console.log(res);
+        if (res.data.success) {
+          toast.success("Blog deleted successfully!");
+        }
+      } catch (error) {
+        toast.error(error.message);
+        console.error(error.message);
+      }
+    };
 
   return (
     <>
@@ -40,7 +42,7 @@ const ManageProjectRow = ({ blog, index }) => {
               Update
             </button>
             <button
-              //   onClick={() => handleDelete(project._id)}
+                onClick={() => handleDelete(blog._id)}
               className="btn btn-xs btn-color"
             >
               Delete
@@ -48,15 +50,10 @@ const ManageProjectRow = ({ blog, index }) => {
           </div>
         </td>
 
-        {/* <UpdateProjectModal
-          project={project}
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          closeModal={closeModal}
-        /> */}
+        {/* Add Update Modal */}
       </tr>
     </>
   );
 };
 
-export default ManageProjectRow;
+export default ManageBlogRow;

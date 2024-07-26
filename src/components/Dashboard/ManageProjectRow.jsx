@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDeleteAProjectMutation } from "../../redux/features/projectApi";
 import toast, { Toaster } from "react-hot-toast";
-import PortfolioModal from "../modal/PortfolioModal";
+import PortfolioModal from "../modal/PortfolioGenericModal";
 import UpdateProjectModalData from "../modal/UpdateProjectModal";
 
 const ManageProjectRow = ({ project, index }) => {
