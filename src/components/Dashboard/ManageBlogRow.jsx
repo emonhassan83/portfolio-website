@@ -1,26 +1,43 @@
 import toast, { Toaster } from "react-hot-toast";
-import { useDeleteBlogMutation } from "../../redux/features/blogApi";
+import {
+  useDeleteBlogMutation,
+  usePublishedBlogMutation,
+} from "../../redux/features/blogApi";
 
 const ManageBlogRow = ({ blog, index }) => {
   //   const [isOpen, setIsOpen] = useState(false);
   const [deleteBlog] = useDeleteBlogMutation();
+  const [publishedBlog] = usePublishedBlogMutation();
 
   //   const closeModal = () => {
   //     setIsOpen(false);
   //   };
 
-    const handleDelete = async (id) => {
-      try {
-        const res = await deleteBlog(id);
-        console.log(res);
-        if (res.data.success) {
-          toast.success("Blog deleted successfully!");
-        }
-      } catch (error) {
-        toast.error(error.message);
-        console.error(error.message);
+  const handlePublishedBlog = async (id) => {
+    try {
+      const res = await publishedBlog(id);
+      console.log(res);
+      if (res.data.success) {
+        toast.success("Blog published successfully!");
       }
-    };
+    } catch (error) {
+      toast.error(error.message);
+      console.error(error.message);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      const res = await deleteBlog(id);
+      console.log(res);
+      if (res.data.success) {
+        toast.success("Blog deleted successfully!");
+      }
+    } catch (error) {
+      toast.error(error.message);
+      console.error(error.message);
+    }
+  };
 
   return (
     <>
@@ -31,7 +48,12 @@ const ManageBlogRow = ({ blog, index }) => {
         <td>{blog?.banner}</td>
         <td>{blog?.author?.name}</td>
         <td>
-          <button className="btn btn-sm">Publish</button>
+          <button
+            onClick={() => handlePublishedBlog(blog._id)}
+            className="btn btn-sm"
+          >
+            Publish
+          </button>
         </td>
         <td>
           <div className="flex items-center">
@@ -42,7 +64,7 @@ const ManageBlogRow = ({ blog, index }) => {
               Update
             </button>
             <button
-                onClick={() => handleDelete(blog._id)}
+              onClick={() => handleDelete(blog._id)}
               className="btn btn-xs btn-color"
             >
               Delete

@@ -2,22 +2,31 @@ import toast, { Toaster } from "react-hot-toast";
 import PortfolioForm from "../../components/form/PortfolioForm";
 import PortfolioInput from "../../components/form/PortfolioInput";
 import PortfolioTextArea from "../../components/form/PortfolioTextarea";
-import { useNavigate } from "react-router-dom";
-import { useAddBlogMutation } from "../../redux/features/blogApi";
+import { useUpdateBlogMutation } from "../../redux/features/blogApi";
 
-const AddBlog = () => {
-  const [addBlog] = useAddBlogMutation();
-  const navigate = useNavigate();
+const UpdateBlogModal = ({ blog, closeModal }) => {
+  const [updateBlog] = useUpdateBlogMutation();
+
+  const defaultValues = {
+    name: blog?.name,
+    banner: blog?.banner,
+    description: blog?.description,
+    images: blog?.images,
+    tags: blog?.tags,
+  };
 
   const onSubmit = async (data) => {
     try {
-      console.log(data);
-      const res = await addBlog(data);
+      const option = {
+        id: blog._id,
+        data: data,
+      };
+      const res = await updateBlog(option);
       console.log(res);
 
       if (res.data.success) {
-        toast.success("Blog added successfully!");
-        navigate("/dashboard/manage-blogs");
+        toast.success("Blog update successfully!");
+        closeModal();
       }
     } catch (error) {
       toast.error(error.message);
@@ -32,7 +41,7 @@ const AddBlog = () => {
         <h2 className="text-xl sm:text-2xl font-bold text-center mb-6">
           Add Blog
         </h2>
-        <PortfolioForm onSubmit={onSubmit}>
+        <PortfolioForm onSubmit={onSubmit} defaultValues={defaultValues}>
           <div className="sm:flex justify-center items-center gap-4">
             <PortfolioInput
               type="text"
@@ -60,7 +69,6 @@ const AddBlog = () => {
             label="Images"
             placeholder="Your Blog Images..."
           />
-
           <PortfolioInput
             type="text"
             name="tags"
@@ -79,4 +87,4 @@ const AddBlog = () => {
   );
 };
 
-export default AddBlog;
+export default UpdateBlogModal;

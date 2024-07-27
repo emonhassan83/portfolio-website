@@ -32,10 +32,10 @@ const ManageBlogs = () => {
           </thead>
           <tbody>
             {data?.data?.length > 0 &&
-              data?.data?.map((project, index) => (
+              data?.data?.map((blog, index) => (
                 <ManageBlogRow
-                  key={project._id}
-                  project={project}
+                  key={blog._id}
+                  blog={blog}
                   index={index}
                 />
               ))}
