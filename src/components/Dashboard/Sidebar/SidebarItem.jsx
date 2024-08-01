@@ -2,48 +2,63 @@ import { NavLink } from "react-router-dom";
 import { MdOutlineManageSearch, MdManageAccounts } from "react-icons/md";
 import { useTheme } from "../../../lib/ThemeProvider";
 
+// Helper function to get class names for NavLink
+const getNavLinkClasses = (isActive, themeMode) => {
+  const baseClasses = "flex items-center px-4 py-2 mt-5 transition-colors duration-300 transform";
+  const hoverClasses = "hover:bg-gray-300 hover:text-gray-700";
+  const activeClasses = isActive ? "bg-gray-300" : "";
+  const themeClasses = themeMode === "dark" ? "text-gray-100 bg-[#1D232A]" : "text-gray-800";
+
+  return `${baseClasses} ${hoverClasses} ${themeClasses} ${activeClasses}`;
+};
+
 const SidebarItem = () => {
-  const { theme } = useTheme(); //* for using light and dark themes
+  const { theme } = useTheme(); // For using light and dark themes
 
   return (
-    <nav
-      className={`${
-        theme.mode === "dark"
-          ? "text-gray-100 bg-[#1D232A]"
-          : "text-gray-800 bg-gray-100"
-      }`}
-    >
-      <>
-        {/* Menu Links */}
-        <NavLink
-          to="add-project"
-          className={({ isActive }) =>
-            `flex items-center px-4 py-2 mt-5  transition-colors duration-300 transform  hover:bg-gray-300   hover:text-gray-700 ${
-              theme.mode === "dark"
-                ? "text-gray-100 bg-[#1D232A]"
-                : "text-gray-800"
-            } ${isActive ? "bg-gray-300" : ""}`
-          }
-        >
-          <MdOutlineManageSearch className="w-5 h-5" />
-
-          <span className="mx-4 font-medium">Add Project</span>
-        </NavLink>
-        <NavLink
-          to="manage-project"
-          className={({ isActive }) =>
-            `flex items-center px-4 py-2 mt-5  transition-colors duration-300 transform  hover:bg-gray-300   hover:text-gray-700 ${
-              theme.mode === "dark"
-                ? "text-gray-100 bg-[#1D232A]"
-                : "text-gray-800"
-            } ${isActive ? "bg-gray-300 " : ""}`
-          }
-        >
-          <MdManageAccounts className="w-5 h-5" />
-
-          <span className="mx-4 font-medium">Manage Project</span>
-        </NavLink>
-      </>
+    <nav className={`${theme.mode === "dark" ? "text-gray-100 bg-[#1D232A]" : "text-gray-800 bg-gray-100"}`}>
+      <NavLink
+        to="add-project"
+        className={({ isActive }) => getNavLinkClasses(isActive, theme.mode)}
+      >
+        <MdOutlineManageSearch className="w-5 h-5" />
+        <span className="mx-4 font-medium">Add Project</span>
+      </NavLink>
+      <NavLink
+        to="manage-projects"
+        className={({ isActive }) => getNavLinkClasses(isActive, theme.mode)}
+      >
+        <MdManageAccounts className="w-5 h-5" />
+        <span className="mx-4 font-medium">Manage Project</span>
+      </NavLink>
+      <NavLink
+        to="manage-skills"
+        className={({ isActive }) => getNavLinkClasses(isActive, theme.mode)}
+      >
+        <MdManageAccounts className="w-5 h-5" />
+        <span className="mx-4 font-medium">Manage Skills</span>
+      </NavLink>
+      <NavLink
+        to="manage-qualifications"
+        className={({ isActive }) => getNavLinkClasses(isActive, theme.mode)}
+      >
+        <MdManageAccounts className="w-5 h-5" />
+        <span className="mx-4 font-medium">Manage Qualifications</span>
+      </NavLink>
+      <NavLink
+        to="add-blog"
+        className={({ isActive }) => getNavLinkClasses(isActive, theme.mode)}
+      >
+        <MdManageAccounts className="w-5 h-5" />
+        <span className="mx-4 font-medium">Add Blog</span>
+      </NavLink>
+      <NavLink
+        to="manage-blogs"
+        className={({ isActive }) => getNavLinkClasses(isActive, theme.mode)}
+      >
+        <MdManageAccounts className="w-5 h-5" />
+        <span className="mx-4 font-medium">Manage Blogs</span>
+      </NavLink>
     </nav>
   );
 };

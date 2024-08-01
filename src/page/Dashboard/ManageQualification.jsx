@@ -5,7 +5,7 @@ import { useGetAllQualificationsQuery } from "../../redux/features/qualification
 const ManageQualification = () => {
   const { data } = useGetAllQualificationsQuery();
   const { theme } = useTheme(); //* for using light and dark themes
-  // console.log(data);
+  console.log(data);
 
   return (
     <>

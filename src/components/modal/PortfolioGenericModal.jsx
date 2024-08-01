@@ -29,6 +29,14 @@ const PortfolioModal = ({ closeModal, isOpen, title, children}) => {
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+              <button
+                  type="button"
+                  className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+                  onClick={closeModal}
+                >
+                  <span className="sr-only">Close</span>
+                  &#x2715;
+                </button>
                 <Dialog.Title
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900 mt-3 mb-6"
