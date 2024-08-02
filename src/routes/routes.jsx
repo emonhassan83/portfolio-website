@@ -13,6 +13,7 @@ import ManageSkills from "../page/Dashboard/ManageSkills";
 import ManageQualification from "../page/Dashboard/ManageQualification";
 import AddBlog from "../page/Dashboard/AddBlog";
 import ManageBlogs from "../page/Dashboard/ManageBlogs";
+import ManageReviews from "../page/Dashboard/ManageReviews";
 
 const router = createBrowserRouter([
   {
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
       {
         path: "manage-blogs",
         element: <ManageBlogs />,
+      },
+      {
+        path: "manage-reviews",
+        element: <ManageReviews />,
       },
     ],
   },

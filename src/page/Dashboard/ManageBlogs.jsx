@@ -7,6 +7,21 @@ const ManageBlogs = () => {
   const { theme } = useTheme(); //* for using light and dark themes
   // console.log(data);
 
+  //* if there have no skill data
+  if (data?.data?.length === 0) {
+    return (
+      <div className="mt-[45%] h-[100vh]">
+        <div className="my-4 text-center">
+          <button className="btn btn-xs">Add</button>
+        </div>
+
+        <p className="text-center font-semibold">
+          There is no longer Blogs here!
+        </p>
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="overflow-x-auto">
