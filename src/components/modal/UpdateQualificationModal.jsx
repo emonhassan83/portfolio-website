@@ -16,10 +16,10 @@ const UpdateQualificationModal = ({ qualification, closeModal }) => {
 
   const onSubmit = async (data) => {
     try {
-        const option = {
-            id: qualification._id,
-            data: data,
-          };
+      const option = {
+        id: qualification._id,
+        data: data,
+      };
       const res = await updateQualification(option);
       console.log(res);
       if (res.data.success) {

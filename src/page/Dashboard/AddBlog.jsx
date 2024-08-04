@@ -11,9 +11,8 @@ const AddBlog = () => {
 
   const onSubmit = async (data) => {
     try {
-      console.log(data);
       const res = await addBlog(data);
-      console.log(res);
+      // console.log(res);
 
       if (res.data.success) {
         toast.success("Blog added successfully!");

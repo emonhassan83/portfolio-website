@@ -1,11 +1,19 @@
+import { useState } from "react";
 import ManageQualificationRow from "../../components/Dashboard/ManageQualificationRow";
 import { useTheme } from "../../lib/ThemeProvider";
 import { useGetAllQualificationsQuery } from "../../redux/features/qualificationApi";
+import PortfolioModal from "../../components/modal/PortfolioGenericModal";
+import AddQualificationModal from "../../components/modal/AddQualificationModal";
 
 const ManageQualification = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const { data } = useGetAllQualificationsQuery();
   const { theme } = useTheme(); //* for using light and dark themes
   // console.log(data);
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
 
   //* if there have no skill data
   if (data?.data?.length === 0) {
@@ -21,7 +29,9 @@ const ManageQualification = () => {
   return (
     <>
       <div className="mx-auto my-4">
-        <button className="btn btn-sm">Add</button>
+        <button onClick={() => setIsOpen(true)} className="btn btn-sm">
+          Add
+        </button>
       </div>
 
       {data?.data?.length > 0 && (
@@ -57,6 +67,14 @@ const ManageQualification = () => {
           </table>
         </div>
       )}
+      <PortfolioModal
+        title={"Add Qualification !"}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        closeModal={closeModal}
+      >
+        <AddQualificationModal closeModal={closeModal} />
+      </PortfolioModal>
     </>
   );
 };

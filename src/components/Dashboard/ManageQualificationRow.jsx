@@ -1,13 +1,16 @@
 import toast, { Toaster } from "react-hot-toast";
 import { useDeleteQualificationMutation } from "../../redux/features/qualificationApi";
+import { useState } from "react";
+import PortfolioModal from "../modal/PortfolioGenericModal";
+import UpdateQualificationModal from "../modal/UpdateQualificationModal";
 
 const ManageQualificationRow = ({ qualification, index }) => {
-  //   const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [deleteQualification] = useDeleteQualificationMutation();
 
-  //   const closeModal = () => {
-  //     setIsOpen(false);
-  //   };
+  const closeModal = () => {
+    setIsOpen(false);
+  };
 
   const handleDelete = async (id) => {
     try {
@@ -33,7 +36,7 @@ const ManageQualificationRow = ({ qualification, index }) => {
         <td>
           <div className="flex items-center">
             <button
-                // onClick={() => setIsOpen(true)}
+              onClick={() => setIsOpen(true)}
               className="btn btn-xs btn-color"
             >
               Update
@@ -48,6 +51,17 @@ const ManageQualificationRow = ({ qualification, index }) => {
         </td>
 
         {/* Update Modal Here */}
+        <PortfolioModal
+          title={"Update Qualification !"}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          closeModal={closeModal}
+        >
+          <UpdateQualificationModal
+            qualification={qualification}
+            closeModal={closeModal}
+          />
+        </PortfolioModal>
       </tr>
     </>
   );

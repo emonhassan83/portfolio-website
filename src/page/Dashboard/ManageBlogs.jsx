@@ -11,10 +11,6 @@ const ManageBlogs = () => {
   if (data?.data?.length === 0) {
     return (
       <div className="mt-[45%] h-[100vh]">
-        <div className="my-4 text-center">
-          <button className="btn btn-xs">Add</button>
-        </div>
-
         <p className="text-center font-semibold">
           There is no longer Blogs here!
         </p>
@@ -24,6 +20,9 @@ const ManageBlogs = () => {
 
   return (
     <>
+      <div className="my-4 text-center">
+        <button className="btn btn-xs">Add</button>
+      </div>
       <div className="overflow-x-auto">
         <table
           className={`table ${
@@ -48,11 +47,7 @@ const ManageBlogs = () => {
           <tbody>
             {data?.data?.length > 0 &&
               data?.data?.map((blog, index) => (
-                <ManageBlogRow
-                  key={blog._id}
-                  blog={blog}
-                  index={index}
-                />
+                <ManageBlogRow key={blog._id} blog={blog} index={index} />
               ))}
           </tbody>
         </table>
