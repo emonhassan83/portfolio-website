@@ -20,38 +20,36 @@ const ManageBlogs = () => {
 
   return (
     <>
-      <div className="my-4 text-center">
-        <button className="btn btn-xs">Add</button>
-      </div>
-      <div className="overflow-x-auto">
-        <table
-          className={`table ${
-            theme.mode === "dark" ? "text-gray-100" : "text-gray-800"
-          }`}
-        >
-          {/* head */}
-          <thead
-            className={`${
+      {data?.data?.length > 0 && (
+        <div className="overflow-x-auto">
+          <table
+            className={`table ${
               theme.mode === "dark" ? "text-gray-100" : "text-gray-800"
             }`}
           >
-            <tr>
-              <th>SL</th>
-              <th>Blog Title</th>
-              <th>Blog Banner </th>
-              <th>Author</th>
-              <th>Publish</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data?.data?.length > 0 &&
-              data?.data?.map((blog, index) => (
+            {/* head */}
+            <thead
+              className={`${
+                theme.mode === "dark" ? "text-gray-100" : "text-gray-800"
+              }`}
+            >
+              <tr>
+                <th>SL</th>
+                <th>Blog Title</th>
+                <th>Blog Banner </th>
+                <th>Author</th>
+                <th>Publish</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data?.data?.map((blog, index) => (
                 <ManageBlogRow key={blog._id} blog={blog} index={index} />
               ))}
-          </tbody>
-        </table>
-      </div>
+            </tbody>
+          </table>
+        </div>
+      )}
     </>
   );
 };

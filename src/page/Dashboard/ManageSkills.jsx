@@ -7,7 +7,6 @@ import AddSkillModal from "../../components/modal/AddSkillModal";
 
 const ManageSkills = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const { data } = useGetAllSkillsQuery();
   const { theme } = useTheme(); //* for using light and dark themes
   // console.log(data);
