@@ -11,10 +11,6 @@ const ManageQualification = () => {
   if (data?.data?.length === 0) {
     return (
       <div className="mt-[45%] h-[100vh]">
-        <div className="my-4 text-center">
-          <button className="btn btn-xs">Add</button>
-        </div>
-
         <p className="text-center font-semibold">
           There is no longer qualification here!
         </p>
@@ -25,41 +21,42 @@ const ManageQualification = () => {
   return (
     <>
       <div className="mx-auto my-4">
-        <button className="btn btn-sm">Add Qualification</button>
+        <button className="btn btn-sm">Add</button>
       </div>
 
-      <div className="overflow-x-auto">
-        <table
-          className={`table ${
-            theme.mode === "dark" ? "text-gray-100" : "text-gray-800"
-          }`}
-        >
-          {/* head */}
-          <thead
-            className={`${
+      {data?.data?.length > 0 && (
+        <div className="overflow-x-auto">
+          <table
+            className={`table ${
               theme.mode === "dark" ? "text-gray-100" : "text-gray-800"
             }`}
           >
-            <tr>
-              <th>SL</th>
-              <th>Qualification name</th>
-              <th>Designation</th>
-              <th>Duration</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data?.data?.length > 0 &&
-              data?.data?.map((qualification, index) => (
+            {/* head */}
+            <thead
+              className={`${
+                theme.mode === "dark" ? "text-gray-100" : "text-gray-800"
+              }`}
+            >
+              <tr>
+                <th>SL</th>
+                <th>Qualification name</th>
+                <th>Designation</th>
+                <th>Duration</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data?.data?.map((qualification, index) => (
                 <ManageQualificationRow
                   key={qualification._id}
                   qualification={qualification}
                   index={index}
                 />
               ))}
-          </tbody>
-        </table>
-      </div>
+            </tbody>
+          </table>
+        </div>
+      )}
     </>
   );
 };

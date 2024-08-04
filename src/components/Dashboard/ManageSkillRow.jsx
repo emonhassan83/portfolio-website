@@ -1,14 +1,16 @@
-// import { useState } from "react";
+import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useDeleteSkillMutation } from "../../redux/features/skillsApi";
+import PortfolioModal from "../modal/PortfolioGenericModal";
+import UpdateSkillModal from "../modal/UpdateSkillModal";
 
 const ManageSkillRow = ({ skill, index }) => {
-  //   const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [deleteSkill] = useDeleteSkillMutation();
 
-  //   const closeModal = () => {
-  //     setIsOpen(false);
-  //   };
+  const closeModal = () => {
+    setIsOpen(false);
+  };
 
   const handleDelete = async (id) => {
     console.log(id);
@@ -43,7 +45,7 @@ const ManageSkillRow = ({ skill, index }) => {
         <td>
           <div className="flex items-center">
             <button
-              //   onClick={() => setIsOpen(true)}
+              onClick={() => setIsOpen(true)}
               className="btn btn-xs btn-color"
             >
               Update
@@ -58,6 +60,14 @@ const ManageSkillRow = ({ skill, index }) => {
         </td>
 
         {/* Modal Here*/}
+        <PortfolioModal
+          title={"Update a Skill !"}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          closeModal={closeModal}
+        >
+          <UpdateSkillModal skill={skill} closeModal={closeModal} />
+        </PortfolioModal>
       </tr>
     </>
   );

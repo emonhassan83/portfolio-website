@@ -23,40 +23,41 @@ const ManageProject = () => {
   }
 
   return (
-    <div>
-      <div className="overflow-x-auto">
-        <table
-          className={`table ${
-            theme.mode === "dark" ? "text-gray-100" : "text-gray-800"
-          }`}
-        >
-          {/* head */}
-          <thead
-            className={`${
+    <>
+      {data?.data?.length > 0 && (
+        <div className="overflow-x-auto">
+          <table
+            className={`table ${
               theme.mode === "dark" ? "text-gray-100" : "text-gray-800"
             }`}
           >
-            <tr>
-              <th>SL</th>
-              <th>Project Image</th>
-              <th>Project Name </th>
-              <th>Duration</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data?.data?.length > 0 &&
-              data?.data?.map((project, index) => (
+            {/* head */}
+            <thead
+              className={`${
+                theme.mode === "dark" ? "text-gray-100" : "text-gray-800"
+              }`}
+            >
+              <tr>
+                <th>SL</th>
+                <th>Project Image</th>
+                <th>Project Name </th>
+                <th>Duration</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data?.data?.map((project, index) => (
                 <ManageProjectRow
                   key={project._id}
                   project={project}
                   index={index}
                 />
               ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
+            </tbody>
+          </table>
+        </div>
+      )}
+    </>
   );
 };
 
