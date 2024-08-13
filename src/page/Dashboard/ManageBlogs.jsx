@@ -10,8 +10,8 @@ const ManageBlogs = () => {
   //* if there have no skill data
   if (data?.data?.length === 0) {
     return (
-      <div className="mt-[45%] h-[100vh]">
-        <p className="text-center font-semibold">
+      <div className="mt-[25%]">
+        <p className="text-center">
           There is no longer Blogs here!
         </p>
       </div>

@@ -1,5 +1,4 @@
 import "./Testimonial.css";
-import { TestimonialData } from "./TestimonialData";
 
 //* Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,9 +7,12 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay"; // Import Swiper CSS for autoplay
 import { Pagination, Autoplay } from "swiper"; // Import Autoplay module
 import { useTheme } from "../../../lib/ThemeProvider";
+import { useGetAllReviewsQuery } from "../../../redux/features/reviewApi";
 
 const Testimonial = () => {
   const { theme } = useTheme(); //* use for dark and light themes
+  const {data} = useGetAllReviewsQuery();
+  // console.log(data);
 
   return (
     <section
@@ -52,17 +54,17 @@ const Testimonial = () => {
         }}
         modules={[Pagination, Autoplay]} // Add Autoplay module here
       >
-        {TestimonialData.map(({ id, image, title, description }) => (
-          <SwiperSlide key={id} className="testimonial__card">
-            <img className="testimonial__img" src={image} alt="" />
+        {data?.data?.map((review) => (
+          <SwiperSlide key={review._id} className="testimonial__card">
+            <img className="testimonial__img" src={review?.user?.photoUrl} alt="Profile URL" />
             <h3
               className={`testimonial__name ${
                 theme.mode === "dark" ? "text-gray-100" : "text__color"
               }`}
             >
-              {title}
+              {review?.user?.name}
             </h3>
-            <p className="testimonial__description">{description}</p>
+            <p className="testimonial__description">{review?.content}</p>
           </SwiperSlide>
         ))}
       </Swiper>

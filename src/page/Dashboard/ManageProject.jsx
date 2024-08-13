@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ManageProjectRow from "../../components/Dashboard/ManageProjectRow";
 import { useTheme } from "../../lib/ThemeProvider";
 import { useGetAllProjectsQuery } from "../../redux/features/projectApi";
@@ -10,12 +11,14 @@ const ManageProject = () => {
   //* if there have no skill data
   if (data?.data?.length === 0) {
     return (
-      <div className="mt-[45%] h-[100vh]">
+      <div className="mt-[25%]">
         <div className="my-4 text-center">
-          <button className="btn btn-xs">Add</button>
+          <Link to="/dashboard/add-project">
+          <button className="btn btn-sm">Add</button>
+          </Link>
         </div>
 
-        <p className="text-center font-semibold">
+        <p className="text-center text-sm">
           There is no longer skills here!
         </p>
       </div>

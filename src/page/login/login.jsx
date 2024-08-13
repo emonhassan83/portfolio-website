@@ -22,7 +22,7 @@ const LoginPage = () => {
         toast.success("User login successfully!");
         dispatch(setUser({ user: user, token: res.data.accessToken }));
         if (user.role === "admin") {
-          navigate("/dashboard/manage-project");
+          navigate("/dashboard/manage-projects");
         } else {
           navigate("/");
         }
