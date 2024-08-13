@@ -19,11 +19,35 @@ const skillApi = baseApi.injectEndpoints({
     }),
 
     getAllSkills: builder.query({
-      query: () => ({
-        url: "/skills/all-skills",
-        method: "GET",
-      }),
+      query: (args) => {
+        const params = new URLSearchParams();
+
+        if (args) {
+          args?.forEach((item) => {
+            params.append(item.name, item.value);
+          });
+        }
+
+        return {
+          url: "/skills/all-skills",
+          method: "GET",
+          params: params,
+        };
+      },
+      transformResponse: (response) => {
+        return {
+          data: response.data,
+          meta: response.meta,
+        };
+      },
     }),
+
+    // getAllSkills: builder.query({
+    //   query: () => ({
+    //     url: "/skills/all-skills",
+    //     method: "GET",
+    //   }),
+    // }),
 
     getASkill: builder.query({
       query: (id) => ({
