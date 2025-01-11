@@ -16,6 +16,7 @@ const LoginPage = () => {
     try {
       const res = await login(data).unwrap();
       // console.log(res);
+      
       const user = verifyToken(res.data.accessToken);
 
       if (res.success) {

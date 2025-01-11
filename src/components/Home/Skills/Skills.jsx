@@ -8,7 +8,10 @@ const Skills = () => {
   const { data } = useGetAllSkillsQuery([
     { name: 'limit', value: 21 }
   ]);
-//   console.log(data);
+
+  const sortedSkills = data?.data?.slice().sort((a, b) =>
+    new Date(a.createdAt) - new Date(b.createdAt)
+  );
 
   return (
     <section
@@ -26,7 +29,7 @@ const Skills = () => {
       </h2>
       <span className="section__subtitle">My technical level</span>
       <div className="skills__container container grid">
-        {data?.data?.map((singleSkill, index) => (
+        {sortedSkills?.map((singleSkill, index) => (
           <Skill key={index} singleSkill={singleSkill} />
         ))}
       </div>
